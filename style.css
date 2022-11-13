@@ -1,0 +1,23 @@
+
+#main{
+    display: flex;
+    flex-direction: column;
+}
+#image{
+    display:block;
+    height: fit-content;
+
+
+    margin: 0 auto ;
+}
+#img-div{
+    display: flex;
+    flex-direction: column;
+}
+#img-caption,#title{
+    margin: 0 auto ;
+}
+img{
+  display:block;
+  max-width: 100%;
+}
