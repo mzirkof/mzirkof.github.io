@@ -18,7 +18,6 @@
 @media (max-width: 375px) {
   body {
     /* Nothing to display for the moment */
-    display: none;
   }
 }
 
@@ -337,6 +336,5 @@
 @media (min-width: 768px) {
   body {
     /* Nothing to display for the moment */
-    display: none;
   }
 }
