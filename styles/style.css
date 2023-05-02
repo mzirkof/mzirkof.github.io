@@ -14,7 +14,15 @@
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
-/* Mobile version of style */
+/* Mobile Version of screen smaller than considered ( < 375px) */
+@media (max-width: 375px) {
+  body {
+    /* Nothing to display for the moment */
+    display: none;
+  }
+}
+
+/* Mobile version for phone with considered screen size minimum 375px */
 @media (min-width: 375px) {
   .toolbar {
     position: fixed;
@@ -328,20 +336,7 @@
 /* Desktop scream size minimum is 768 px */
 @media (min-width: 768px) {
   body {
+    /* Nothing to display for the moment */
     display: none;
-  }
-
-  .toolbar {
-    /* position */
-    position: fixed;
-    left: 2vw;
-
-    /* size */
-    width: 96vw;
-    height: 10vh;
-
-    /* content */
-    background: red;
-    color: blueviolet;
   }
 }
