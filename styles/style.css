@@ -76,7 +76,7 @@
     position: relative;
     top: 60px;
     background-image: url(../images/header-illsutration-mobile@2x.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -110,7 +110,7 @@
     width: 85%;
     text-align: center;
     color: #172b4d;
-    margin-bottom: 23px;
+    margin-bottom: 13px;
   }
 
   .headline .social {
@@ -119,7 +119,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 65px;
+    margin-bottom: 25px;
   }
 
   .social img {
@@ -332,6 +332,8 @@
     width: 100%;
   }
 
+  /* ============================================================================================================== */
+
   /* Last part About Me section */
   .about_me {
     height: 300px;
@@ -344,7 +346,7 @@
 
   .about_me .head {
     width: 98%;
-    height: 340px;
+    height: 380px;
     position: relative;
     top: 60px;
     background-image: url(../images/illustration_about_me.png);
@@ -386,7 +388,7 @@
     width: 85%;
     text-align: center;
     color: #172b4d;
-    margin-bottom: 23px;
+    margin-bottom: 20px;
   }
 
   .btn {
@@ -401,24 +403,102 @@
     height: 48px;
     background: #36b37f;
     border-radius: 4px;
+    margin-bottom: 10px;
   }
 
   .btn_txt {
     width: 98%;
     height: 24px;
-
-    /* Theme 2 / Button Normal */
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 24px;
+    letter-spacing: 0.03em;
+    color: white;
+  }
 
-    /* identical to box height, or 141% */
+  .about_me .about {
+    margin-top: 100px;
+  }
+
+  .grid2-container {
+    display: grid;
+  }
+
+  .about .grid_2-item {
+    width: 96%;
+    margin-left: 2%;
+    height: 85vw;
+    background: #ebf0ee;
+    border: 1px solid #d0d9d4;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .about .grid_2-item .icon {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid_2-item .icon .img {
+    width: 100px;
+    height: 100px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .icon .img img {
+    width: 70%;
+    height: 70%;
+  }
+
+  .about .grid_2-item .txt {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+  }
+
+  .about .txt .tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 30px;
+    padding: 12px;
+    width: fit-content;
+
+    /* Neutrals/N0 */
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  .about .tag_ctn {
+    /* background: red; */
+  }
+
+  .about .tag .tag_txt {
+    width: fit-content;
+    height: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 16px;
+
+    /* identical to box height, or 133% */
     letter-spacing: 0.03em;
 
-    /* Theme 2 / Neutral 11 */
-    color: white;
+    /* Success/G300 */
+    color: #36b37e;
   }
 }
 
