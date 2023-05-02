@@ -47,7 +47,7 @@
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 3px;
     color: #36b37e;
   }
@@ -76,7 +76,7 @@
     position: relative;
     top: 60px;
     background-image: url(../images/header-illsutration-mobile@2x.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -110,7 +110,7 @@
     width: 85%;
     text-align: center;
     color: #172b4d;
-    margin-bottom: 23px;
+    margin-bottom: 10px;
   }
 
   .headline .social {
@@ -119,7 +119,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 65px;
+    margin-bottom: 45px;
+  }
+
+  .social ul {
+    width: 90%;
+    margin-left: 5%;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .social ul li {
+    list-style: none;
+    display: inline;
   }
 
   .social img {
