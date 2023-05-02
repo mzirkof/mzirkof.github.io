@@ -47,7 +47,7 @@
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: bolder;
-    font-size: 25px;
+    font-size: 20px;
     letter-spacing: 3px;
     color: #36b37e;
   }
@@ -214,6 +214,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
+    text-align: center;
 
     /* or 133% */
     display: flex;
@@ -251,7 +252,7 @@
     align-items: center;
     padding: 8px 12px;
     width: fit-content;
-    height: 32px;
+    height: 20px;
 
     /* Theme 2 / Neutral 10 */
     background: #ebf0ee;
@@ -299,10 +300,17 @@
     justify-content: center;
     padding: 12px;
     gap: 10px;
-    width: 122px;
+    width: 130px;
     height: 48px;
     background: #36b37f;
+    border: 1px solid #36b37f;
+    color: white;
     border-radius: 4px;
+  }
+
+  .see:hover {
+    color: #36b37f;
+    background: white;
   }
 
   .see_txt {
@@ -324,7 +332,6 @@
     letter-spacing: 0.03em;
 
     /* Theme 2 / Neutral 11 */
-    color: white;
   }
 
   .grid_1-item .img_place_holder {
@@ -402,8 +409,15 @@
     width: 160px;
     height: 48px;
     background: #36b37f;
+    border: 1px solid #36b37f;
+    color: white;
     border-radius: 4px;
     margin-bottom: 10px;
+  }
+
+  .btn:hover {
+    color: #36b37f;
+    background: white;
   }
 
   .btn_txt {
@@ -415,7 +429,6 @@
     font-size: 17px;
     line-height: 24px;
     letter-spacing: 0.03em;
-    color: white;
   }
 
   .about_me .about {
@@ -461,7 +474,7 @@
     height: 70%;
   }
 
-  .about .grid_2-item .txt {
+  .grid_2-item .txt {
     width: 100%;
     height: 50%;
     text-align: center;
@@ -482,8 +495,12 @@
     margin-right: 10px;
   }
 
+  .about .txt .tag:hover {
+    background-color: #36b37e;
+  }
+
   .about .tag_ctn {
-    /* background: red; */
+    margin-top: 25px;
   }
 
   .about .tag .tag_txt {
@@ -499,6 +516,49 @@
 
     /* Success/G300 */
     color: #36b37e;
+  }
+
+  .about .txt .tag:hover > .tag_txt {
+    color: white;
+  }
+
+  .skills_list {
+    list-style: none;
+  }
+
+  /* Form section */
+  .form_section {
+    width: 100vw;
+    background: red;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form_section .txt {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 24px;
+    width: 327px;
+    height: 363px;
+  }
+
+  .form_section .txt p {
+    width: 98%;
+    height: 363px;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #172b4d;
+    background: green;
+    margin-bottom: 58px;
   }
 }
 
