@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <h3><b>Hello Microverse Project</b></h3>
+  <h3><b>PortFolio Project</b></h3>
 </div>
 
 <!-- TABLE OF CONTENTS -->
@@ -25,11 +25,12 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 Hello Microverse APP <a name="about-project"></a>
+# 📖 PortFolio APP <a name="about-project"></a>
 
 <!-- > Describe your project in 1 or 2 sentences. -->
 
-**Hello Microverse App** is a Simple Webpage showing the Legendary 'Hello" Message on each first Programming display Test
+**PortFolio App** is a Web Application showing Presenting Celestin SOUOP (Mzirkof) as a Web Developper.
+The app shows projects in which he recently works on.
 
 ## 🛠 Built With <a name="built-with"></a>
 
@@ -46,8 +47,9 @@
 
 > Features of the application are :
 
-- **Display a Text : 'Hello Microverse' with Html**
-- **Uses CSS to style that text**
+- **Set on a fixed  Toolbar**
+- **the toolbar is responsive and contains a button Menu**
+- **The app is in Mobile and in Web version**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -81,7 +83,7 @@ No Installation needed
 
 ### Usage
 
-To run the project, just open (double click on) the file named A.html
+To run the project, just open (double click on) the file named index.html
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -95,7 +97,7 @@ To run the project, just open (double click on) the file named A.html
 
 - GitHub: [@mzirkof](https://github.com/mzirkof)
 - Twitter: [@mzirkof](https://twitter.com/mzirkof)
-- LinkedIn: [Mzirkof](https://www.linkedin.com/in/celestin-souop-58341a109/)
+- LinkedIn: [mzirkof](https://www.linkedin.com/in/celestin-souop-58341a109/)
 
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
@@ -124,7 +126,7 @@ If you like this project just add a star on the repository ⭐️
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-I would like to thank Microverse, My reviewers
+I would like to thank Microverse, My reviewers and my program partners for their contributions
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
