@@ -110,7 +110,7 @@
     width: 85%;
     text-align: center;
     color: #172b4d;
-    margin-bottom: 10px;
+    margin-bottom: 13px;
   }
 
   .headline .social {
@@ -149,6 +149,7 @@
     height: 100%;
   }
 
+  /* Section 2: Recent Works  */
   .r_works {
     width: 100vw;
     min-height: 300px;
@@ -225,6 +226,7 @@
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
+    text-align: center;
 
     /* or 133% */
     display: flex;
@@ -262,7 +264,7 @@
     align-items: center;
     padding: 8px 12px;
     width: fit-content;
-    height: 32px;
+    height: 20px;
 
     /* Theme 2 / Neutral 10 */
     background: #ebf0ee;
@@ -310,10 +312,17 @@
     justify-content: center;
     padding: 12px;
     gap: 10px;
-    width: 122px;
+    width: 130px;
     height: 48px;
     background: #36b37f;
+    border: 1px solid #36b37f;
+    color: white;
     border-radius: 4px;
+  }
+
+  .see:hover {
+    color: #36b37f;
+    background: white;
   }
 
   .see_txt {
@@ -321,7 +330,6 @@
 
     /* See project */
 
-    width: 98px;
     height: 24px;
 
     /* Theme 2 / Button Normal */
@@ -335,12 +343,237 @@
     letter-spacing: 0.03em;
 
     /* Theme 2 / Neutral 11 */
-    color: white;
   }
 
   .grid_1-item .img_place_holder {
     background: gray;
     width: 100%;
+  }
+
+  /* ============================================================================================================== */
+
+  /* Last part About Me section */
+  .about_me {
+    height: 300px;
+    width: 96vw;
+    margin-left: 2vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about_me .head {
+    width: 98%;
+    height: 380px;
+    position: relative;
+    top: 60px;
+    background-image: url(../images/illustration_about_me.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .head .decor {
+    width: 70px;
+    height: 130px;
+    position: absolute;
+    float: right;
+    right: 0;
+    top: -65px;
+    background-image: url(../images/Mask\ Group.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .about_me h1 {
+    height: fit-content;
+    width: 85%;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 45px;
+    line-height: 60px;
+    text-align: center;
+    color: #172b4d;
+    margin-bottom: 12px;
+  }
+
+  .about_me .head .description {
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 33px;
+    width: 85%;
+    text-align: center;
+    color: #172b4d;
+    margin-bottom: 20px;
+  }
+
+  .btn {
+    /* Auto layout */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    gap: 10px;
+    width: 160px;
+    height: 48px;
+    background: #36b37f;
+    border: 1px solid #36b37f;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+
+  .btn:hover {
+    color: #36b37f;
+    background: white;
+  }
+
+  .btn_txt {
+    width: 98%;
+    height: 24px;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 24px;
+    letter-spacing: 0.03em;
+  }
+
+  .about_me .about {
+    margin-top: 100px;
+  }
+
+  .grid2-container {
+    display: grid;
+  }
+
+  .about .grid_2-item {
+    width: 96%;
+    margin-left: 2%;
+    height: 85vw;
+    background: #ebf0ee;
+    border: 1px solid #d0d9d4;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .about .grid_2-item .icon {
+    width: 100%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid_2-item .icon .img {
+    width: 100px;
+    height: 100px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+  }
+
+  .icon .img img {
+    width: 70%;
+    height: 70%;
+  }
+
+  .grid_2-item .txt {
+    width: 100%;
+    height: 50%;
+    text-align: center;
+  }
+
+  .about .txt .tag {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    height: 8px;
+    padding: 12px;
+    width: fit-content;
+
+    /* Neutrals/N0 */
+    background: white;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+    list-style: none;
+  }
+
+  .about .txt .tag:hover {
+    background-color: #36b37e;
+  }
+
+  .about .tag_ctn {
+    margin-top: 25px;
+  }
+
+  .about .tag .tag_txt {
+    width: fit-content;
+    height: 16px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 10px;
+    line-height: 16px;
+
+    /* identical to box height, or 133% */
+    letter-spacing: 0.03em;
+
+    /* Success/G300 */
+    color: #36b37e;
+  }
+
+  .about .txt .tag:hover > .tag_txt {
+    color: white;
+  }
+
+  .skills_list {
+    list-style: none;
+  }
+
+  /* Form section */
+  .form_section {
+    width: 100vw;
+    background: red;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form_section .txt {
+    /* Auto layout */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    gap: 24px;
+    width: 327px;
+    height: 363px;
+  }
+
+  .form_section .txt p {
+    width: 98%;
+    height: 363px;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #172b4d;
+    background: green;
+    margin-bottom: 58px;
   }
 }
 
