@@ -419,10 +419,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 12px;
     gap: 10px;
-    width: 160px;
-    height: 48px;
     background: #36b37f;
     border: 1px solid #36b37f;
     color: white;
@@ -444,6 +441,7 @@
     font-size: 17px;
     line-height: 24px;
     letter-spacing: 0.03em;
+    padding: 12px;
   }
 
   .about_me .about {
@@ -601,7 +599,7 @@
     font-style: normal;
     font-weight: 700;
     font-size: 40px;
-    line-height: 60px;
+    line-height: 52px;
     text-align: center;
     color: #172b4d;
     margin-bottom: 58px;
@@ -619,7 +617,7 @@
 
   .form_s .form li input {
     list-style: none;
-    margin-bottom: 10px;
+    margin-bottom: 24px;
     height: 100%;
     padding: 15px 16px;
     box-sizing: border-box;
