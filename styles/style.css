@@ -369,7 +369,7 @@
     position: relative;
     top: 60px;
     background-image: url(../images/illustration_about_me.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -584,7 +584,7 @@
     width: 94vw;
     margin-left: 3vw;
     position: relative;
-    top: 1250px;
+    top: 1300px;
 
     /* content */
     display: flex;
