@@ -50,6 +50,7 @@
     font-size: 20px;
     letter-spacing: 3px;
     color: #36b37e;
+    text-decoration: none;
   }
 
   .toolbar .menu {
@@ -368,7 +369,7 @@
     position: relative;
     top: 60px;
     background-image: url(../images/illustration_about_me.png);
-    background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -418,10 +419,7 @@
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    padding: 12px;
     gap: 10px;
-    width: 160px;
-    height: 48px;
     background: #36b37f;
     border: 1px solid #36b37f;
     color: white;
@@ -443,6 +441,7 @@
     font-size: 17px;
     line-height: 24px;
     letter-spacing: 0.03em;
+    padding: 12px;
   }
 
   .about_me .about {
@@ -574,6 +573,159 @@
     color: #172b4d;
     background: green;
     margin-bottom: 58px;
+  }
+
+  /* ============================================================================================================================= */
+
+  /* Form section styling */
+  .form_s {
+    /* background: red;atment  */
+    height: 800px;
+    width: 94vw;
+    margin-left: 3vw;
+    position: relative;
+    top: 1300px;
+
+    /* content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .form_s h1 {
+    height: fit-content;
+    width: 90%;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 52px;
+    text-align: center;
+    color: #172b4d;
+    margin-bottom: 58px;
+  }
+
+  .form_s .form {
+    width: 90%;
+  }
+
+  .form_s .form li {
+    list-style: none;
+    margin-bottom: 10px;
+    height: 50px;
+  }
+
+  .form_s .form li input {
+    list-style: none;
+    margin-bottom: 24px;
+    height: 100%;
+    padding: 15px 16px;
+    box-sizing: border-box;
+    width: 100%;
+    border: 1px solid #d0d9d4;
+    border-radius: 4px;
+    color: #6b778c;
+  }
+
+  .form_s .form li textarea {
+    border: 1px solid #60c095;
+    border-radius: 4px;
+    width: 100%;
+    height: 120px;
+    padding: 12px;
+    box-sizing: border-box;
+    color: #42526e;
+  }
+
+  .form_s .form .submit {
+    /* background: green; */
+    position: relative;
+    margin-top: 90px;
+    display: flex;
+    justify-content: center;
+  }
+
+  /* ===================================================================================================== */
+
+  /* Footer styling */
+  .img_bg {
+    /* width: 100%; */
+
+    /* background: green; */
+    background-image: url(../images/illustration-contact-form.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    width: 60px;
+    height: 130px;
+
+    /* left: 409.63px; */
+    top: 1190px;
+    float: right;
+    z-index: 2;
+
+    /* transform: matrix(-0.99, 0.16, 0.16, 0.99, 0, 0); */
+  }
+
+  footer {
+    width: 100vw;
+    height: 130px;
+    position: relative;
+    top: 1150px;
+    float: left;
+    display: flex;
+    flex-direction: column;
+  }
+
+  footer span {
+    /* Supporting Text */
+
+    /* position: relative; */
+    width: 100%;
+    height: 38px;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 32px;
+
+    /* or 160% */
+    text-align: center;
+
+    /* Neutrals/N500 */
+    color: #42526e;
+    margin-bottom: 29px;
+  }
+
+  footer .f_social {
+    width: 40%;
+    margin-left: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-content: space-between;
+    margin-bottom: 25px;
+  }
+
+  footer .item {
+    list-style: none;
+    display: inline;
+    width: 20px;
+    height: 20px;
+  }
+
+  .item .icon_img {
+    width: 100%;
+    height: 100%;
+  }
+
+  footer hr {
+    width: 30%;
+    margin-left: 35%;
+    height: 6px;
+    border-radius: 8px;
+    background: black;
   }
 }
 
