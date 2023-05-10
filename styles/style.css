@@ -411,8 +411,6 @@
     color: white;
     border-radius: 4px;
     margin-bottom: 10px;
-    padding: 12px;
-    width: 45%;
   }
 
   .btn:hover {
@@ -421,14 +419,13 @@
   }
 
   .btn_txt {
-    width: 98%;
-    height: 24px;
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 24px;
     letter-spacing: 0.03em;
+    padding: 12px;
   }
 
   .about_me .about {
@@ -529,7 +526,8 @@
     width: 94vw;
     margin-left: 3vw;
     position: relative;
-    top: 1300px;
+    top: 1280px;
+    top: calc(180vw + 590px);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -591,7 +589,7 @@
   /* Footer styling */
   .img_bg1 {
     background-image: url(../images/illustration-contact-form.png);
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
@@ -599,6 +597,7 @@
     width: 60px;
     height: 130px;
     top: 1190px;
+    top: calc(150vw + 590px);
     float: right;
     z-index: 2;
   }
@@ -608,6 +607,7 @@
     height: 130px;
     position: relative;
     top: 1200px;
+    top: calc(160vw + 550px);
     float: left;
     display: flex;
     flex-direction: column;
