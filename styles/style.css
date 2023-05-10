@@ -18,7 +18,7 @@
 /* Mobile Version of screen smaller than considered ( < 375px) */
 @media (max-width: 375px) {
   body {
-    /* Nothing to display for the moment */
+    display: flex;
   }
 }
 
@@ -41,8 +41,6 @@
     align-items: center;
     justify-content: space-between;
     background: white;
-
-    /* amazing stuffs */
     box-shadow: 0 2px 8px #d0d9d4;
   }
 
@@ -50,8 +48,6 @@
     height: 48px;
     width: 24px;
     margin-left: 25px;
-
-    /* content */
     display: flex;
     align-items: center;
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -214,8 +210,6 @@
   .grid_1-item .txt {
     background: white;
     border-radius: 5px;
-
-    /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -227,27 +221,20 @@
 
   .txt .project_title {
     width: 100%;
-
-    /* Theme 2 / H4 */
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;
     line-height: 32px;
     text-align: center;
-
-    /* or 133% */
     display: flex;
     align-items: center;
     justify-content: center;
-
-    /* Theme 2 / Neutral 2 */
     color: #3a4a42;
     margin-bottom: 10px;
   }
 
   .txt .tag_ctn {
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -256,31 +243,22 @@
     padding: 0;
     gap: 2%;
     width: 100%;
-
-    /* height: 40px; */
     height: fit-content;
     margin-bottom: 10px;
-
-    /* Inside auto layout */
     flex: none;
     order: 1;
     flex-grow: 0;
   }
 
   .tag_ctn .tag {
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: center;
     padding: 8px 12px;
     width: fit-content;
     height: 20px;
-
-    /* Theme 2 / Neutral 10 */
     background: #ebf0ee;
     border-radius: 2px;
-
-    /* Inside auto layout */
     flex: none;
     order: 0;
     flex-grow: 0;
@@ -293,27 +271,21 @@
     font-size: 12px;
     line-height: 16px;
     letter-spacing: 0.03em;
-
-    /* Theme 2 / Neutral 2 */
     color: #3a4a42;
   }
 
   .txt .action_2 {
-    /* Action */
     width: 90%;
     height: auto;
     display: flex;
     justify-content: center;
     align-items: center;
-
-    /* Inside auto layout */
     flex: none;
     order: 2;
     flex-grow: 0;
   }
 
   .see {
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -334,23 +306,13 @@
   }
 
   .see_txt {
-    /* Action */
-
-    /* See project */
-
     height: 24px;
-
-    /* Theme 2 / Button Normal */
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: 500;
     font-size: 17px;
     line-height: 24px;
-
-    /* identical to box height, or 141% */
     letter-spacing: 0.03em;
-
-    /* Theme 2 / Neutral 11 */
   }
 
   .grid_1-item .img_place_holder {
@@ -375,8 +337,6 @@
     height: 380px;
     position: relative;
     top: 60px;
-
-    /* background-image: url(../images/illustration_about_me.png); */
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -434,7 +394,6 @@
   }
 
   .btn {
-    /* Auto layout */
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -520,8 +479,6 @@
     height: 8px;
     padding: 12px;
     width: fit-content;
-
-    /* Neutrals/N0 */
     background: white;
     border-radius: 8px;
     margin-bottom: 10px;
@@ -544,11 +501,7 @@
     font-weight: 600;
     font-size: 10px;
     line-height: 16px;
-
-    /* identical to box height, or 133% */
     letter-spacing: 0.03em;
-
-    /* Success/G300 */
     color: #36b37e;
   }
 
@@ -564,14 +517,11 @@
 
   /* Form section styling */
   .form_s {
-    /* background: red;atment  */
     height: 800px;
     width: 94vw;
     margin-left: 3vw;
     position: relative;
     top: 1300px;
-
-    /* content */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -622,7 +572,6 @@
   }
 
   .form_s .form .submit {
-    /* background: green; */
     position: relative;
     margin-top: 90px;
     display: flex;
@@ -633,9 +582,6 @@
 
   /* Footer styling */
   .img_bg1 {
-    /* width: 100%; */
-
-    /* background: green; */
     background-image: url(../images/illustration-contact-form.png);
     background-size: contain;
     background-repeat: no-repeat;
@@ -644,13 +590,9 @@
     position: relative;
     width: 60px;
     height: 130px;
-
-    /* left: 409.63px; */
     top: 1190px;
     float: right;
     z-index: 2;
-
-    /* transform: matrix(-0.99, 0.16, 0.16, 0.99, 0, 0); */
   }
 
   footer {
@@ -664,9 +606,6 @@
   }
 
   footer span {
-    /* Supporting Text */
-
-    /* position: relative; */
     width: 100%;
     height: 38px;
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -674,11 +613,7 @@
     font-weight: 400;
     font-size: 20px;
     line-height: 32px;
-
-    /* or 160% */
     text-align: center;
-
-    /* Neutrals/N500 */
     color: #42526e;
     margin-bottom: 29px;
   }
@@ -719,12 +654,7 @@
 
 /* Desktop scream size minimum is 768 px */
 @media (min-width: 768px) {
-  body {
-    /* Nothing to display for the moment */
-  }
-
   .toolbar {
-    /* background: red; */
     left: 0;
     top: 0;
     width: 100vw;
@@ -741,8 +671,6 @@
     width: 60vw;
     margin-left: 20vw;
     height: 100%;
-
-    /* background: #172b4d; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -775,26 +703,21 @@
 
   /* Headline Section */
   .headline {
-    /* background: red; */
     background-image: url(../images/Header-llustration-desktop.png);
     background-size: cover;
     min-height: 0;
     height: 140vh;
     margin-bottom: 100px;
-
-    /* content */
     display: flex;
     padding-top: 16%;
     align-items: center;
   }
 
   .headline h1 {
-    /* background: green; */
     margin: 0;
   }
 
   .headline .description {
-    /* background: red; */
     width: 50%;
     font-size: 26px;
   }
@@ -823,9 +746,6 @@
   }
 
   .r_works .grid-container {
-    /* display: grid;
-    justify-content: space-evenly;
-    grid-template-columns: 1fr 1fr 1fr; */
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     width: calc(55% + 250px);
@@ -844,8 +764,6 @@
   .grid_1-item .txt {
     background: white;
     border-radius: 5px;
-
-    /* Auto layout */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -864,7 +782,6 @@
   }
 
   .tag_ctn .tag {
-    /* Auto layout */
     margin-bottom: 8px;
   }
 
@@ -878,7 +795,6 @@
   }
 
   .about_me .head {
-    /* width: 98%; */
     width: calc(55% + 250px);
     height: 300px;
     top: 0;
@@ -925,7 +841,6 @@
     margin-bottom: 12px;
   }
 
-  /* Grid container */
   .about_me .about {
     margin-top: 0;
     margin-bottom: 30px;
@@ -948,13 +863,10 @@
 
   /* Form section styling */
   .form_s {
-    /* background: red; */
     height: calc(16vw + 200px);
     width: calc(55vw + 250px);
     margin-left: calc((100vw - (55vw + 250px)) / 2);
     top: 0;
-
-    /* content */
     display: flex;
     gap: 10px;
     flex-direction: row;
@@ -965,8 +877,6 @@
   .form_s h1 {
     width: 45%;
     margin-bottom: 0;
-
-    /* font-size: calc(30px); */
     font-size: calc(1vw + 10px);
     line-height: 52px;
   }
@@ -985,28 +895,16 @@
   .img_bg1,
   .img_bg2,
   .img_bg3 {
-    /* width: 100%; */
-
-    /* background: green; */
     background-image: url(../images/contact\ form-illustratoin-3-desktop.png);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     position: absolute;
-
-    /* width: 200px;
-    height: 450px; */
     width: calc(6vw + 100px);
     height: calc(14vw + 250px);
     right: 0;
     top: 2800px;
-
-    /* Betwenn screem  */
-
-    /* top: calc(215vw + 500px); */
-
-    /* bottom: 0; */
     float: bottom;
     z-index: 2;
   }
@@ -1014,27 +912,16 @@
   .img_bg2 {
     left: 0;
     background-image: url(../images/illustration-1-contact-form-desktop.png);
-
-    /* width: 180px; */
     width: calc(4vw + 100px);
-
-    /* height: 340px; */
     height: calc(12vw + 150px);
     top: 2925px;
-
-    /* top: calc(18vw + 250px); */
     background-size: cover;
   }
 
   .img_bg3 {
-    /* left: 300px; */
     left: 30vw;
     background-image: url(../images/illustration-2-contact-form-desktop.png);
-
-    /* width: 115px; */
     width: calc(4vw + 80px);
-
-    /* height: 90px; */
     height: calc(1vw + 90px);
     top: 3060px;
   }
