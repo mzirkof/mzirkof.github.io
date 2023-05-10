@@ -11,6 +11,9 @@
   
 </head>
 <body>
+  
+  <div class="main">
+  <!-- Toollbar ( Icon and Menu )  -->
   <header class="toolbar">
     <a href="./index.html" class="logo">
       MZK
@@ -18,12 +21,19 @@
     <nav class="menu">
       <img src="images/Union.png" alt="">
     </nav>
+    <nav class="navigation">
+      <ul class="nav_ctn">
+        <li><a class="nav_item" href="#Portfolio">PortFolio</a></li>
+        <li><a class="nav_item" href="#About">About</a></li>
+        <li><a class="nav_item" href="#Contact">Contact</a></li>
+      </ul>
+    </nav>
   </header>
 
   <!-- Headline section -->
   <section class="headline">
     <h1>
-        Hey there. <br>I’m Mzirkof .
+        Hey there. &nbsp; I’m Mzirkof.
       <p>
           I’m a software developer
       </p>
@@ -42,9 +52,10 @@
       </ul>
     </section>
     <section class="btn_down">
-      <img src="images/Normal Button/Secondary/Disabled.png" alt="">
+      <a href=""><img src="images/Normal Button/Secondary/Disabled.png" alt=""></a>
     </section>
   </section>
+
   <section class="r_works">
     <section class="title">
       <h3>My Recent Works</h3>
@@ -137,13 +148,31 @@
 
           </section>
         </section>
+        <section class="grid_1-item">
+          <section class="txt">
+            <h3 class="project_title">Multi-Post Stories Gain+Glory</h3>
+            <ul class="tag_ctn">
+              <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
+              <li class="tag"><span class="tag_txt">CSS</span></li>
+              <li class="tag"><span class="tag_txt">Javascript</span></li>
+              <li class="tag"><span class="tag_txt">HTML</span></li>
+            </ul>
+            <section class="action_2 centered">
+              <button class="see">
+                <span class="see_txt">See Project</span>
+              </button>
+            </section>
+
+          </section>
+        </section>
     </section>
   </section>
 
   <!-- About Me Section -->
   <section class="about_me">
     <section class="head">
-      <div class="decor"> </div>
+      <div class="decor1"> </div>
+      <div class="decor2"> </div>
       <h1>
         About me
       </h1>
@@ -158,61 +187,61 @@
       </section>
     </section>
 
-    <section class="about grid2-container">
-      <ul class="skills_list">
-      <section class="grid_2-item">
-        <section class="icon">
-            <section class="img">
-              <img src="images/Icon Langguage.png" alt="">
-            </section>
+    <ul class="skills_list">
+      <section class="about grid2-container">
+        <section class="grid_2-item">
+          <section class="icon">
+              <section class="img">
+                <img src="images/Icon Langguage.png" alt="">
+              </section>
+          </section>
+          <section class="txt">
+          <li><p class="project_title">Languages</p></li>
+            <ul class="tag_ctn">
+              <li class="tag"><span class="tag_txt">Javascript</span></li>
+              <li class="tag"><span class="tag_txt">Ruby</span></li>
+              <li class="tag"><span class="tag_txt">HTML</span></li>
+              <li class="tag"><span class="tag_txt">CSS</span></li>
+            </ul>
+          </section>
         </section>
-        <section class="txt">
-        <li><p class="project_title">Languages</p></li>
-          <ul class="tag_ctn">
-            <li class="tag"><span class="tag_txt">Javascript</span></li>
-            <li class="tag"><span class="tag_txt">Ruby</span></li>
-            <li class="tag"><span class="tag_txt">HTML</span></li>
-            <li class="tag"><span class="tag_txt">CSS</span></li>
-          </ul>
+        <section class="grid_2-item">
+          <section class="icon">
+              <section class="img">
+                <img src="images/Icon Name.png" alt="">
+              </section>
+          </section>
+          <section class="txt">
+            <li><p class="project_title">Frameworks</p></li>
+            <ul class="tag_ctn">
+              <li class="tag"><span class="tag_txt">React.js</span></li>
+              <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
+              <li class="tag"><span class="tag_txt">RSpec</span></li>
+              <li class="tag"><span class="tag_txt">Capybara</span></li>
+              <li class="tag"><span class="tag_txt">Selenium</span></li>
+            </ul>
+          </section>
         </section>
-      </section>
-      <section class="grid_2-item">
-        <section class="icon">
-            <section class="img">
-              <img src="images/Icon Name.png" alt="">
-            </section>
-        </section>
-        <section class="txt">
-          <li><p class="project_title">Frameworks</p></li>
-          <ul class="tag_ctn">
-            <li class="tag"><span class="tag_txt">React.js</span></li>
-            <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
-            <li class="tag"><span class="tag_txt">RSpec</span></li>
-            <li class="tag"><span class="tag_txt">Capybara</span></li>
-            <li class="tag"><span class="tag_txt">Selenium</span></li>
-          </ul>
-        </section>
-      </section>
 
-      <section class="grid_2-item">
-        <section class="icon">
-            <section class="img">
-              <img src="images/skills.png" alt="">
-            </section>
-        </section>
-        <section class="txt">
-          <li><p class="project_title">Skills</p></li>
-          <ul class="tag_ctn">
-            <li class="tag"><span class="tag_txt">Database Management</span></li>
-            <li class="tag"><span class="tag_txt">Version Control</span></li>
-            <li class="tag"><span class="tag_txt">CLI</span></li>
-            <li class="tag"><span class="tag_txt">Web Development</span></li>
-            <li class="tag"><span class="tag_txt">API Design</span></li>
-          </ul>
+        <section class="grid_2-item">
+          <section class="icon">
+              <section class="img">
+                <img src="images/skills.png" alt="">
+              </section>
+          </section>
+          <section class="txt">
+            <li><p class="project_title">Skills</p></li>
+            <ul class="tag_ctn">
+              <li class="tag"><span class="tag_txt">Database Management</span></li>
+              <li class="tag"><span class="tag_txt">Version Control</span></li>
+              <li class="tag"><span class="tag_txt">CLI</span></li>
+              <li class="tag"><span class="tag_txt">Web Development</span></li>
+              <li class="tag"><span class="tag_txt">API Design</span></li>
+            </ul>
+          </section>
         </section>
       </section>
     </ul>
-  </section>
   </section>
 
   <!-- Form section of Portfolio -->
@@ -237,7 +266,9 @@
   </section>
 
   <!-- Footer of the page -->
-  <section class="img_bg"></section>
+  <section class="img_bg1"></section>
+  <section class="img_bg2"></section>
+  <section class="img_bg3"></section>
   <footer>
     <span>
       souop_007@yahoo.fr
@@ -251,5 +282,6 @@
     </ul>
     <hr>
   </footer>
+</div>
 </body>
 </html>
