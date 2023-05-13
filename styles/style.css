@@ -46,7 +46,7 @@
 
   .toolbar .logo {
     height: 48px;
-    width: 24px;
+    width: 10%;
     margin-left: 25px;
     display: flex;
     align-items: center;
@@ -57,6 +57,25 @@
     letter-spacing: 3px;
     color: #36b37e;
     text-decoration: none;
+    justify-content: center;
+    transform: rotate(90 deg);
+    transition: all 1s ease-out;
+    animation: rotate 3s;
+  }
+
+  .toolbar .logo:hover {
+    color: #172b4d;
+    cursor: pointer;
+  }
+
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+
+    100% {
+      transform: rotate(360deg);
+    }
   }
 
   .toolbar .menu {
@@ -155,6 +174,11 @@
     height: 100%;
   }
 
+  .social img:hover {
+    transform: rotate(90 deg);
+    transition: all 1s ease-out;
+  }
+
   /* Section 2: Recent Works  */
   .r_works {
     width: 100vw;
@@ -233,6 +257,7 @@
     justify-content: center;
     color: #3a4a42;
     margin-bottom: 10px;
+    transition: 0.5s ease-out;
   }
 
   .txt .tag_ctn {
@@ -299,11 +324,13 @@
     border: 1px solid #36b37f;
     color: white;
     border-radius: 4px;
+    transition: all 0.6s ease-in-out;
   }
 
   .see:hover {
     color: #36b37f;
     background: white;
+    cursor: pointer;
   }
 
   .see_txt {
@@ -416,6 +443,7 @@
   .btn:hover {
     color: #36b37f;
     background: white;
+    cursor: pointer;
   }
 
   .btn_txt {
@@ -469,6 +497,15 @@
   .icon .img img {
     width: 70%;
     height: 70%;
+    transition: 1s ease-in-out;
+  }
+
+  .grid_2-item:hover > .icon .img img {
+    animation: rotate 1s;
+  }
+
+  .grid_2-item:hover > .txt .project_title {
+    transform: scale(1.2);
   }
 
   .grid_2-item .txt {
@@ -489,10 +526,12 @@
     margin-bottom: 10px;
     margin-right: 10px;
     list-style: none;
+    transition: 0.4s ease-in-out;
   }
 
   .about .txt .tag:hover {
     background-color: #36b37e;
+    cursor: pointer;
   }
 
   .about .tag_ctn {
@@ -508,6 +547,7 @@
     line-height: 16px;
     letter-spacing: 0.03em;
     color: #36b37e;
+    transition: 0.4s ease-in-out;
   }
 
   .about .txt .tag:hover > .tag_txt {
@@ -654,6 +694,15 @@
     border-radius: 8px;
     background: black;
   }
+
+  .decor {
+    transition: 1s ease-out;
+  }
+
+  .decor:hover {
+    /* background: red; */
+    transform: scale(1.1);
+  }
 }
 
 /* ========================================================================================================================= */
@@ -668,15 +717,19 @@
     width: 100vw;
     height: 6vw;
     max-height: 70px;
+    display: flex;
   }
 
-  .toolbar .logo,
   .toolbar .menu {
     display: none;
   }
 
+  .toolbar .logo {
+    width: 20%;
+  }
+
   .toolbar .navigation {
-    width: 60vw;
+    width: 80vw;
     margin-left: 20vw;
     height: 100%;
     display: flex;
@@ -885,11 +938,29 @@
     align-items: center;
   }
 
-  .form_s h1 {
-    width: 45%;
+  .form_s .ctn_title {
+    width: 49%;
+    height: 100%;
     margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  .form_s h1 {
+    width: 80%;
+    height: 200px;
     font-size: calc(1vw + 10px);
     line-height: 52px;
+    margin-right: 5%;
+    display: flex;
+    justify-content: center;
+    margin-top: 80px;
+    transition: 1s ease-in-out;
+  }
+
+  .form_s h1:hover {
+    margin-left: 60px;
   }
 
   .form_s .form {
