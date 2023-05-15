@@ -88,7 +88,7 @@ To run the project, just open (double click on) the file named index.html
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-### Live Demo
+### 🎲 Live Demo
 
 The Web App is Available online: [just follow this link](https://mzirkof.github.io/)
 
