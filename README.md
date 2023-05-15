@@ -88,6 +88,13 @@ To run the project, just open (double click on) the file named index.html
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
+### 🎲 Live Demo
+
+The Web App is Available online: [just follow this link](https://mzirkof.github.io/)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
 <!-- AUTHORS -->
 
 ## 👥 Authors <a name="authors"></a>
@@ -107,8 +114,8 @@ To run the project, just open (double click on) the file named index.html
 ## 🔭 Future Features <a name="future-features"></a>
 
 
-- [ ] **Web and Mobile Versions**
-- [ ] **Responsive Design**
+- [ ] **Page interactions using Javascipt**
+- [ ] **Automatic code generation**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
