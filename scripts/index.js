@@ -14,5 +14,5 @@ btnMenu.addEventListener('click', () => {
 });
 
 btnCloseMenu.addEventListener('click', () => {
-  mobileMenu.className = 'd_none';
+  mobileMenu.className = 'mobile_menu d_none';
 });
