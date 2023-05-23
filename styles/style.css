@@ -53,12 +53,12 @@
     height: 98vh;
     width: 100vw;
     background: white;
-    border-bottom: 2vh solid #36b37e;
-    border-bottom-left-radius: 5px;
+    border-radius: 0 0 30px 30px;
     align-items: center;
     transition: all 1s ease-out;
     flex-direction: column;
     justify-content: flex-start;
+    box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
   }
 
   @keyframes turn_go {
@@ -104,6 +104,11 @@
     height: 100%;
   }
 
+  #close_pop {
+    width: 52px;
+    height: 55px;
+  }
+
   .mobile_menu .navigation {
     /* background: gray; */
   }
@@ -121,10 +126,13 @@
     text-decoration: none;
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 20px;
-    color: #344563;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    position: absolute;
+    height: 24px;
+    left: 10vw;
+    color: #3a4a42;
   }
 
   .toolbar .logo {
@@ -261,7 +269,11 @@
     transition: all 1s ease-out;
   }
 
+  /* ========================================================================= */
+
   /* Section 2: Recent Works  */
+
+  /* contain */
   .r_works {
     width: 100vw;
     min-height: 300px;
@@ -342,7 +354,7 @@
     transition: 0.5s ease-out;
   }
 
-  .txt .tag_ctn {
+  .tag_ctn {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -428,6 +440,148 @@
   .grid_1-item .img_place_holder {
     background: gray;
     width: 100%;
+  }
+
+  /* =============================== Pop_up section ================================== */
+
+  /* pop up windows */
+  .pop_up {
+    display: flex;
+    position: fixed;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    background: #c1c7d0;
+    transition: all 1s ease-out;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @keyframes scaleIn {
+    0% {
+      transform: scale(0.1);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes scaleOut {
+    0% {
+      transform: scale(1);
+      transform: rotate(0deg);
+      width: 100vw;
+      height: 100vh;
+    }
+
+    100% {
+      transform: scale(0.1);
+      transform: rotate(-360deg);
+      width: 5vw;
+      height: 5vh;
+    }
+  }
+
+  .pop_up .container {
+    position: absolute;
+    width: 90%;
+    height: 836px;
+    left: calc(50% - 90% / 2);
+    top: 20px;
+    background: #fff;
+    border: 1px solid #dfe1e6;
+    border-radius: 16px;
+    animation: scaleIn 1s;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    row-gap: 10px;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 16px;
+    overflow-y: scroll;
+  }
+
+  .pop_down {
+    display: flex;
+    position: fixed;
+    z-index: 8;
+    top: 47vw;
+    left: 47vh;
+    height: 0;
+    width: 0;
+    background: rgba(0, 0, 0, 0.6);
+    transition: all 1s ease-out;
+    justify-content: center;
+    align-items: center;
+    animation: scaleOut 1s;
+  }
+
+  .container .pop_head {
+    display: flex;
+    width: 100%;
+    align-content: center;
+    justify-content: flex-end;
+    height: 220px;
+    background-image: url(./../images/Snapshoot\ Portfolio.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 8px;
+  }
+
+  .container .grid-item {
+    width: auto;
+  }
+
+  .pop_title .title {
+    height: 135px;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 32px;
+    line-height: 44px;
+    color: #172b4d;
+  }
+
+  .pop_title .tag_ctn {
+    justify-content: flex-start;
+    height: 20px;
+  }
+
+  .pop_details .details {
+    width: 311px;
+    height: 313px;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    color: #344563;
+  }
+
+  .pop_links {
+    display: flex;
+    padding: 5px 8px;
+    justify-content: space-between;
+  }
+
+  .pop_links .see {
+    width: fit-content;
+  }
+
+  .title .pop_logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-size: 14px;
+    letter-spacing: 2px;
+    color: #36b37e;
+    margin-left: 10px;
+    transition: all 1s ease-out;
   }
 
   /* ============================================================================================================== */
@@ -802,6 +956,11 @@
     display: flex;
   }
 
+  .d_none,
+  .d_flex {
+    display: none;
+  }
+
   .toolbar .menu {
     display: none;
   }
@@ -925,6 +1084,30 @@
 
   .tag_ctn .tag {
     margin-bottom: 8px;
+  }
+
+  /* pop_up section */
+  .pop_up {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(193, 199, 208, 0.8);
+  }
+
+  .pop_up .container {
+    background: #fff;
+    position: relative;
+    width: 920px;
+    width: 55vw;
+    height: 70vh;
+    left: 0;
+    top: 0;
   }
 
   /* ======================================== */
