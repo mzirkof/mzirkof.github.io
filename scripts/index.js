@@ -63,3 +63,33 @@ workContain = `<section class="title">
             </section>`;
 const workSection = document.getElementById('test');
 workSection.innerHTML = `${workContain}`;
+
+// ============================================================================================
+// Actions on btn see details popup
+const btnPopUp = document.getElementsByClassName('see');
+const popUpWindows = document.getElementById('pop_up');
+// console.log(btnPopUp);
+for (let i = 0; i < btnPopUp.length; i += 1) {
+  const element = btnPopUp[i];
+  element.addEventListener('click', () => {
+    console.log('load modal pop up window');
+    // workSection.childNodes('<h1>Mzirkof</h1>');
+    const pop = `<section class="container">
+                    <div class="title">
+                      <a href="./index.html" class="pop_logo">
+                        MZK
+                      </a>
+                      <nav class="menu">
+                        <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_pop">
+                      </nav>
+                    </div>
+                </section>`;
+    popUpWindows.innerHTML = `${pop}`;
+    popUpWindows.className = 'pop_up';
+    const btnClosePop = document.getElementById('close_pop');
+    btnClosePop.addEventListener('click', () => {
+      console.log('closed');
+      popUpWindows.className = '';
+    });
+  });
+}
