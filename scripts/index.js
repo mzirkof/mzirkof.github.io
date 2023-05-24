@@ -3,8 +3,6 @@
 
 const btnMenu = document.getElementById('menu_icon');
 const btnCloseMenu = document.getElementById('close_menu_icon');
-// const menuItem = document.getElementsByClassName('nav_item');
-
 const mobileMenu = document.getElementById('mobile_menu');
 
 const btnPopUp = document.getElementsByClassName('see');
@@ -16,6 +14,12 @@ btnMenu.addEventListener('click', () => {
 
 btnCloseMenu.addEventListener('click', () => {
   mobileMenu.className = 'mobile_menu d_none';
+});
+
+document.querySelectorAll('.close').forEach((k) => {
+  k.addEventListener('click', () => {
+    mobileMenu.className = 'mobile_menu d_none';
+  });
 });
 
 // ============================================================================================
