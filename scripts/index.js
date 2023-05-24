@@ -1,6 +1,5 @@
 // ============================================================================================
 // Annimating the menu button
-let i = 0;
 
 const btnMenu = document.getElementById('menu_icon');
 const btnCloseMenu = document.getElementById('close_menu_icon');
@@ -12,8 +11,6 @@ const popUpWindows = document.getElementById('pop_up');
 
 btnMenu.addEventListener('click', () => {
   mobileMenu.className = 'mobile_menu d_flex';
-  i += 1;
-  console.log(`has been clicked ${i} times`);
 });
 
 btnCloseMenu.addEventListener('click', () => {
@@ -76,7 +73,6 @@ workSection.innerHTML = `${workContain}`;
 // Actions on btn see details popup
 
 function openPopUp() {
-  console.log('load modal pop up window');
   const pop = `<section class="container">
                     <div class="grid-item pop_head">
                       <nav class="menu">
@@ -122,14 +118,11 @@ function openPopUp() {
   const popContainer = document.querySelector('.container');
   const btnClosePop = document.getElementById('close_pop');
   btnClosePop.addEventListener('click', () => {
-    console.log('closed');
-    // popUpWindows.className = '';
     popUpWindows.className = 'pop_down';
     popContainer.style.display = 'none';
   });
 }
 
-// console.log(btnPopUp);
 for (let i = 0; i < btnPopUp.length; i += 1) {
   const element = btnPopUp[i];
   element.addEventListener('click', () => { openPopUp(works[0]); });
