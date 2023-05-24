@@ -14,18 +14,34 @@
   
   <div class="main">
   <!-- Toollbar ( Icon and Menu )  -->
-  <header class="toolbar">
+  <header class="toolbar" id="toolbar">
     <a href="./index.html" class="logo">
       MZK
     </a>
     <nav class="menu">
-      <img src="images/Union.png" alt="">
+      <img src="images/Union.png" alt="" id="menu_icon">
     </nav>
     <nav class="navigation">
       <ul class="nav_ctn">
-        <li><a class="nav_item" href="#Portfolio">PortFolio</a></li>
-        <li><a class="nav_item" href="#About">About</a></li>
-        <li><a class="nav_item" href="#Contact">Contact</a></li>
+        <li><a class="nav_item" href="#r_works">PortFolio</a></li>
+        <li><a class="nav_item" href="#about_me">About</a></li>
+        <li><a class="nav_item" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <header class="mobile_menu" id="mobile_menu">
+    <div class="m_head">
+      <nav class="menu">
+        <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_menu_icon">
+      </nav>
+    </div>
+    
+    <nav class="navigation">
+      <ul class="nav_ctn">
+        <li><a class="nav_item close" href="#r_works">PortFolio</a></li>
+        <li><a class="nav_item close" href="#about_me">About</a></li>
+        <li><a class="nav_item close" href="#contact">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -56,120 +72,16 @@
     </section>
   </section>
 
-  <section class="r_works">
-    <section class="title">
-      <h3>My Recent Works</h3>
-      <p class="s"></p>
-    </section>
+  <section class="r_works" id="test">
 
-    <section class="works grid-container">
-        <section class="grid_1-item">
-          <section class="txt">
-            <h3 class="project_title">Multi-Post Stories Gain+Glory</h3>
-            <ul class="tag_ctn">
-              <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
-              <li class="tag"><span class="tag_txt">CSS</span></li>
-              <li class="tag"><span class="tag_txt">Javascript</span></li>
-              <li class="tag"><span class="tag_txt">HTML</span></li>
-            </ul>
-            <section class="action_2 centered">
-              <button class="see">
-                <span class="see_txt">See Project</span>
-              </button>
-            </section>
+  </section>
 
-          </section>
-        </section>
-        <section class="grid_1-item">
-          <section class="txt">
-            <h3 class="project_title">Multi-Post Stories Gain+Glory</h3>
-            <ul class="tag_ctn">
-              <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
-              <li class="tag"><span class="tag_txt">CSS</span></li>
-              <li class="tag"><span class="tag_txt">Javascript</span></li>
-              <li class="tag"><span class="tag_txt">HTML</span></li>
-            </ul>
-            <section class="action_2 centered">
-              <button class="see">
-                <span class="see_txt">See Project</span>
-              </button>
-            </section>
-
-          </section>
-        </section>
-        <section class="grid_1-item">
-          <section class="txt">
-            <h3 class="project_title">Multi-Post Stories Gain+Glory</h3>
-            <ul class="tag_ctn">
-              <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
-              <li class="tag"><span class="tag_txt">CSS</span></li>
-              <li class="tag"><span class="tag_txt">Javascript</span></li>
-              <li class="tag"><span class="tag_txt">HTML</span></li>
-            </ul>
-            <section class="action_2 centered">
-              <button class="see">
-                <span class="see_txt">See Project</span>
-              </button>
-            </section>
-
-          </section>
-        </section>
-        <section class="grid_1-item">
-          <section class="txt">
-            <h3 class="project_title">Multi-Post Stories Gain+Glory</h3>
-            <ul class="tag_ctn">
-              <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
-              <li class="tag"><span class="tag_txt">CSS</span></li>
-              <li class="tag"><span class="tag_txt">Javascript</span></li>
-              <li class="tag"><span class="tag_txt">HTML</span></li>
-            </ul>
-            <section class="action_2 centered">
-              <button class="see">
-                <span class="see_txt">See Project</span>
-              </button>
-            </section>
-
-          </section>
-        </section>
-        <section class="grid_1-item">
-          <section class="txt">
-            <h3 class="project_title">Multi-Post Stories Gain+Glory</h3>
-            <ul class="tag_ctn">
-              <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
-              <li class="tag"><span class="tag_txt">CSS</span></li>
-              <li class="tag"><span class="tag_txt">Javascript</span></li>
-              <li class="tag"><span class="tag_txt">HTML</span></li>
-            </ul>
-            <section class="action_2 centered">
-              <button class="see">
-                <span class="see_txt">See Project</span>
-              </button>
-            </section>
-
-          </section>
-        </section>
-        <section class="grid_1-item">
-          <section class="txt">
-            <h3 class="project_title">Multi-Post Stories Gain+Glory</h3>
-            <ul class="tag_ctn">
-              <li class="tag"><span class="tag_txt">Ruby on Rails</span></li>
-              <li class="tag"><span class="tag_txt">CSS</span></li>
-              <li class="tag"><span class="tag_txt">Javascript</span></li>
-              <li class="tag"><span class="tag_txt">HTML</span></li>
-            </ul>
-            <section class="action_2 centered">
-              <button class="see">
-                <span class="see_txt">See Project</span>
-              </button>
-            </section>
-
-          </section>
-        </section>
-    </section>
+  <section id="pop_up" hidden>
+      je suis la
   </section>
 
   <!-- About Me Section -->
-  <section class="about_me">
+  <section class="about_me" id="about_me">
     <section class="head">
       <div class="decor decor1"> </div>
       <div class="decor decor2"> </div>
@@ -245,7 +157,7 @@
   </section>
 
   <!-- Form section of Portfolio -->
-  <section class="form_s">
+  <section class="form_s" id="contact">
     <section class="ctn_title">
       <h1>
         I'm always interested in hearing about new projects, so if you'd like to chat please get in touch.
@@ -286,5 +198,8 @@
     <hr>
   </footer>
 </div>
+
+<!-- Script call -->
+<script src="scripts/index.js"></script>
 </body>
 </html>
