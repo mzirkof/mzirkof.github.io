@@ -52,7 +52,7 @@
     position: fixed;
     top: 0;
     z-index: 11;
-    height: 98vh;
+    height: 90vh;
     width: 100vw;
     background: white;
     border-radius: 0 0 30px 30px;
@@ -450,10 +450,15 @@
     top: 0;
     left: 0;
     width: 100vw;
-    background: #c1c7d0;
-    transition: all 1s ease-out;
+    height: 100vh;
+    background: rgba(193, 199, 208, 0.8);
+    transition: all 0.5s ease-out;
     justify-content: center;
     align-items: center;
+  }
+
+  .blured_main {
+    filter: blur(5px);
   }
 
   @keyframes scaleIn {
@@ -485,15 +490,15 @@
   .pop_up .container {
     position: absolute;
     width: 90%;
-    height: 836px;
+    height: auto;
     left: calc(50% - 90% / 2);
     top: 20px;
     background: #fff;
     border: 1px solid #dfe1e6;
     border-radius: 16px;
-    animation: scaleIn 1s;
+    animation: scaleIn 0.5s;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 30% 0% 22% 35% 10%;
     row-gap: 10px;
     flex-direction: column;
     align-items: flex-start;
@@ -509,10 +514,10 @@
     height: 0;
     width: 0;
     background: rgba(0, 0, 0, 0.6);
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
     justify-content: center;
     align-items: center;
-    animation: scaleOut 1s;
+    animation: scaleOut 0.5s;
   }
 
   .container .pop_head {
@@ -548,7 +553,7 @@
 
   .pop_details .details {
     width: 311px;
-    height: 313px;
+    height: auto;
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1118,18 +1123,17 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(193, 199, 208, 0.8);
   }
 
   .pop_up .container {
-    background: #fff;
     top: 0;
     left: 0;
     position: relative;
-    width: 40%;
-    height: 96%;
-    grid-template-rows: 4% 60% 9% 9% 20%;
-    gap: 8px;
+    width: 41%;
+    height: 98%;
+    z-index: 11;
+    grid-template-rows: 5% 55% 8% 5% 20%;
+    gap: 10px;
     border: 1px solid #ebecf0;
     box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
     border-radius: 8px;
@@ -1179,9 +1183,9 @@
   }
 
   .pop_title .title {
-    width: 60%;
+    width: 55%;
     height: 100%;
-    font-size: 24px;
+    font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 25px;
@@ -1194,7 +1198,7 @@
   .pop_title .d_links {
     display: flex;
     justify-content: flex-end;
-    width: 40%;
+    width: 45%;
   }
 
   .pop_title .d_links .see {
