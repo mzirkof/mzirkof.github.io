@@ -154,12 +154,20 @@ const contactForm = document.querySelector('#contact_form');
 contactForm.addEventListener('submit', (event) => {
   event.preventDefault();
 
-  const name = contactForm.user_name.value;
   const mail = contactForm.user_mail.value;
-  const msg = contactForm.user_msg.value;
+  const errorMsg = document.querySelector('.form_msg');
+
+  // const name = contactForm.user_name.value;
+  // const msg = contactForm.user_msg.value;
 
   // user email must be in lower case
-  if (!(mail === mail.toLowerCase())) {
-    console.log('erreur : email en minuscule');
+  if (mail === mail.toLowerCase()) {
+    contactForm.submit();
+    errorMsg.textContent = '';
+    errorMsg.classList.remove('error_msg');
+  } else {
+    // console.log('erreur :  ');
+    errorMsg.classList.add('error_msg');
+    errorMsg.textContent = 'Please email adress must not contains upper case caracters';
   }
 });
