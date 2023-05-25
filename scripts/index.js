@@ -183,9 +183,25 @@ let userDatas = {
   userMsg: '',
 };
 
+// Saving process
+function localSave() {
+  localStorage.setItem('userDatas', JSON.stringify(userDatas));
+}
+
 // restoring data from local storage
 function restoreUserData() {
-  userDatas = JSON.parse(localStorage.getItem('userDatas'));
+  let datas = localStorage.getItem('userDatas');
+  if (datas === null) {
+    localSave();
+    datas = localStorage.getItem('userDatas');
+    if (datas === null) {
+      // Local storage could not be compatible with the Web browser
+      // Local storage could be disabled or could have reach it limit number in the Web browser
+    }
+  } else {
+    userDatas = JSON.parse(datas);
+  }
+
   if (userDatas.userName !== '') {
     contactForm.user_name.value = userDatas.userName;
   }
@@ -197,11 +213,6 @@ function restoreUserData() {
   }
 }
 restoreUserData();
-
-// Saving process
-function localSave() {
-  localStorage.setItem('userDatas', JSON.stringify(userDatas));
-}
 
 // watch inputs to save what is inside
 contactForm.user_name.addEventListener('change', () => {
