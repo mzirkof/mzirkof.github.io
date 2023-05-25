@@ -174,3 +174,56 @@ contactForm.addEventListener('submit', (event) => {
     errorMsg.textContent = 'Please email adress must not contains upper case caracters';
   }
 });
+
+// ====================== Local Storage ======================================
+
+let userDatas = {
+  userName: '',
+  userMail: '',
+  userMsg: '',
+};
+
+// Saving process
+function localSave() {
+  localStorage.setItem('userDatas', JSON.stringify(userDatas));
+}
+
+// restoring data from local storage
+function restoreUserData() {
+  let datas = localStorage.getItem('userDatas');
+  if (datas === null) {
+    localSave();
+    datas = localStorage.getItem('userDatas');
+    if (datas === null) {
+      // Local storage could not be compatible with the Web browser
+      // Local storage could be disabled or could have reach it limit number in the Web browser
+    }
+  } else {
+    userDatas = JSON.parse(datas);
+  }
+
+  if (userDatas.userName !== '') {
+    contactForm.user_name.value = userDatas.userName;
+  }
+  if (userDatas.userMail !== '') {
+    contactForm.user_mail.value = userDatas.userMail;
+  }
+  if (userDatas.userMsg !== '') {
+    contactForm.user_msg.value = userDatas.userMsg;
+  }
+}
+restoreUserData();
+
+// watch inputs to save what is inside
+contactForm.user_name.addEventListener('change', () => {
+  userDatas.userName = contactForm.user_name.value;
+  localSave();
+});
+contactForm.user_mail.addEventListener('change', () => {
+  userDatas.userMail = contactForm.user_mail.value;
+  localSave();
+});
+contactForm.user_msg.addEventListener('change', () => {
+  userDatas.userMsg = contactForm.user_msg.value;
+  localSave();
+});
