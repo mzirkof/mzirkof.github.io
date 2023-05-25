@@ -147,3 +147,19 @@ for (let i = 0; i < btnPopUp.length; i += 1) {
   const element = btnPopUp[i];
   element.addEventListener('click', () => { openPopUp(works[0]); });
 }
+
+// ==================== Form Validation ====================================
+const contactForm = document.querySelector('#contact_form');
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const name = contactForm.user_name.value;
+  const mail = contactForm.user_mail.value;
+  const msg = contactForm.user_msg.value;
+
+  // user email must be in lower case
+  if (!(mail === mail.toLowerCase())) {
+    console.log('erreur : email en minuscule');
+  }
+});
