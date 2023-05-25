@@ -490,7 +490,7 @@
   .pop_up .container {
     position: absolute;
     width: 90%;
-    height: 836px;
+    height: auto;
     left: calc(50% - 90% / 2);
     top: 20px;
     background: #fff;
@@ -498,7 +498,7 @@
     border-radius: 16px;
     animation: scaleIn 0.5s;
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 30% 0% 22% 35% 10%;
     row-gap: 10px;
     flex-direction: column;
     align-items: flex-start;
@@ -553,7 +553,7 @@
 
   .pop_details .details {
     width: 311px;
-    height: 313px;
+    height: auto;
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: 400;
@@ -1109,8 +1109,8 @@
     width: 41%;
     height: 98%;
     z-index: 11;
-    grid-template-rows: 4% 56% 9% 9% 20%;
-    gap: 8px;
+    grid-template-rows: 5% 55% 8% 5% 20%;
+    gap: 10px;
     border: 1px solid #ebecf0;
     box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
     border-radius: 8px;
