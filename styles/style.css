@@ -1213,14 +1213,12 @@
   }
 
   .d_pop_tag_ctn {
-    /* background: red; */
     display: flex;
     align-content: center;
     align-items: center;
   }
 
   .d_pop_tag_ctn .tag_ctn {
-    /* background: green; */
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0;
