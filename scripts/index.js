@@ -157,16 +157,11 @@ contactForm.addEventListener('submit', (event) => {
   const mail = contactForm.user_mail.value;
   const errorMsg = document.querySelector('.form_msg');
 
-  // const name = contactForm.user_name.value;
-  // const msg = contactForm.user_msg.value;
-
-  // user email must be in lower case
   if (mail === mail.toLowerCase()) {
     contactForm.submit();
     errorMsg.textContent = '';
     errorMsg.classList.remove('error_msg');
   } else {
-    // console.log('erreur :  ');
     errorMsg.classList.add('error_msg');
     errorMsg.textContent = 'Please email adress must not contains upper case caracters';
   }
