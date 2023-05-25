@@ -1,6 +1,7 @@
 // ============================================================================================
 // Annimating the menu button
 
+const main = document.querySelector('.main');
 const btnMenu = document.getElementById('menu_icon');
 const btnCloseMenu = document.getElementById('close_menu_icon');
 // const menuItem = document.getElementsByClassName('nav_item');
@@ -135,9 +136,12 @@ function openPopUp() {
   popUpWindows.innerHTML = `${pop}`;
   popUpWindows.className = 'pop_up';
 
+  main.classList.add('blured_main');
+
   const popContainer = document.querySelector('.container');
   const btnClosePop = document.getElementById('close_pop');
   btnClosePop.addEventListener('click', () => {
+    main.classList.remove('blured_main');
     popUpWindows.className = 'pop_down';
     popContainer.style.display = 'none';
   });
