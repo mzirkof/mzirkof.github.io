@@ -155,3 +155,22 @@ for (let i = 0; i < btnPopUp.length; i += 1) {
   const element = btnPopUp[i];
   element.addEventListener('click', () => { openPopUp(works[0]); });
 }
+
+// ==================== Form Validation ====================================
+const contactForm = document.querySelector('#contact_form');
+
+contactForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+
+  const mail = contactForm.user_mail.value;
+  const errorMsg = document.querySelector('.form_msg');
+
+  if (mail === mail.toLowerCase()) {
+    contactForm.submit();
+    errorMsg.textContent = '';
+    errorMsg.classList.remove('error_msg');
+  } else {
+    errorMsg.classList.add('error_msg');
+    errorMsg.textContent = 'Please email adress must not contains upper case caracters';
+  }
+});

@@ -858,8 +858,31 @@
   .form_s .form .submit {
     position: relative;
     margin-top: 90px;
+    height: 100px;
     display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .submit .btn {
+    width: 40%;
+  }
+
+  .form_s .form .error_msg {
+    font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 18px;
+    letter-spacing: 0.03em;
+    padding: 8px;
+    width: 100%;
+    height: 100%;
+    border-left: 5px solid #36b37e;
+    display: flex;
+    align-items: center;
     justify-content: center;
+    color: #172b4d;
   }
 
   /* ===================================================================================================== */
@@ -885,7 +908,7 @@
     height: 130px;
     position: relative;
     top: 1200px;
-    top: calc(160vw + 550px);
+    top: calc(160vw + 640px);
     float: left;
     display: flex;
     flex-direction: column;
@@ -1194,14 +1217,12 @@
   }
 
   .d_pop_tag_ctn {
-    /* background: red; */
     display: flex;
     align-content: center;
     align-items: center;
   }
 
   .d_pop_tag_ctn .tag_ctn {
-    /* background: green; */
     display: flex;
     justify-content: flex-start;
     margin-bottom: 0;
@@ -1352,7 +1373,14 @@
   }
 
   .form_s .form .submit {
+    flex-direction: row;
     justify-content: flex-start;
+    height: auto;
+  }
+
+  .form_s .form .error_msg {
+    width: 65%;
+    margin-left: 5%;
   }
 
   /* ===================================================================================================== */
