@@ -1,9 +1,9 @@
 // ============================================================================================
 // Annimating the menu button
 
+const main = document.querySelector('.main');
 const btnMenu = document.getElementById('menu_icon');
 const btnCloseMenu = document.getElementById('close_menu_icon');
-
 const mobileMenu = document.getElementById('mobile_menu');
 
 const btnPopUp = document.getElementsByClassName('see');
@@ -79,20 +79,45 @@ function openPopUp() {
                         <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_pop">
                       </nav>
                     </div>
+                    <div class="grid-item illustration"></div>
                     <div class="grid-item pop_title">
                       <span class="title">
                        Keeping track of hundreds of components
                       </span>
+                      <section class="d_links" hidden >
+                        <div class="links action_2 centered">
+                          <button class="see">
+                            <span class="see_txt">See Live</span>
+                            <img src="images/Icons/see live icon.svg">
+                          </button>
+                        </div>
+                        <div class="links action_2 centered">
+                          <button class="see">
+                            <span class="see_txt">See Source</span>
+                            <img src="images/Icons/Vector.svg">
+                          </button>
+                        </div>
+                      </section>
                       <ul class="tag_ctn">
                         <li class="tag"><span class="tag_txt">Ruby On Rails</span></li>
                         <li class="tag"><span class="tag_txt">CSS</span></li>
                         <li class="tag"><span class="tag_txt">Javascript</span></li>
                       </ul>
                     </div>
+                    <div class="d_pop_tag_ctn">
+                      <ul class="tag_ctn">
+                        <li class="tag"><span class="tag_txt">CodeKit</span></li>
+                        <li class="tag"><span class="tag_txt">Github</span></li>
+                        <li class="tag"><span class="tag_txt">Javascript</span></li>
+                        <li class="tag"><span class="tag_txt">Bootstrap</span></li>
+                        <li class="tag"><span class="tag_txt">Terminal</span></li>
+                        <li class="tag"><span class="tag_txt">Codepen</span></li>
+                      </ul>
+                    </div>
                     <div class="grid-item pop_details">
                       <div class="details">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
-                      <br><br>
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
                       Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
                       </div>
                     </div>
@@ -115,9 +140,12 @@ function openPopUp() {
   popUpWindows.innerHTML = `${pop}`;
   popUpWindows.className = 'pop_up';
 
+  main.classList.add('blured_main');
+
   const popContainer = document.querySelector('.container');
   const btnClosePop = document.getElementById('close_pop');
   btnClosePop.addEventListener('click', () => {
+    main.classList.remove('blured_main');
     popUpWindows.className = 'pop_down';
     popContainer.style.display = 'none';
   });
