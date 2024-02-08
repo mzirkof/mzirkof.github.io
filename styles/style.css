@@ -344,11 +344,19 @@
     background: #ebf0ee;
     border-radius: 8px;
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     margin-bottom: 20px;
     margin-left: 4%;
   }
 
+  .grid_1-item .illustration_image{
+    position: relative;
+    top: 0;
+    height: 50%;
+  }
+  .grid_1-item .illustration_image img {
+    width: 100%;
+  }
   .grid_1-item .txt {
     background: white;
     border-radius: 5px;
@@ -357,7 +365,7 @@
     align-items: center;
     position: relative;
     padding: 16px 0;
-    height: 40%;
+    height: 49%;
     bottom: 0;
   }
 
@@ -550,7 +558,7 @@
     width: 100%;
     align-content: center;
     justify-content: flex-end;
-    height: 220px;
+    height: 200px;
     background-image: url(./../images/Snapshoot\ Portfolio.svg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -559,6 +567,12 @@
 
   .container .grid-item {
     width: auto;
+  }
+
+  .container .grid-item img{
+    width: 100%;
+    height: 100%;
+
   }
 
   .pop_title .title {
@@ -594,6 +608,11 @@
 
   .pop_links .see {
     width: fit-content;
+  }
+
+  .pop_links .see img{
+    height: 4em;
+    transform: scale(2.5);
   }
 
   .title .pop_logo {
@@ -1119,7 +1138,7 @@
     align-items: center;
     position: relative;
     padding: 16px 0;
-    height: 45%;
+    height: 49%;
     bottom: 0;
   }
 
@@ -1196,11 +1215,11 @@
   .container .illustration {
     width: 100%;
     height: 100%;
-    background-image: url(./../images/Snapshoot\ Portfolio\ Desktop.svg);
+    /* background-image: url(./../images/Snapshoot\ Portfolio\ Desktop.svg); */
     background-repeat: no-repeat;
     background-size: cover;
     border: 1px solid #dfe1e6;
-    border-radius: 8px;
+    border-radius: 15px;
   }
 
   .pop_title {
