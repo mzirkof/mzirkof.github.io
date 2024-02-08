@@ -339,7 +339,7 @@
 
   .grid_1-item {
     width: 92%;
-    height: 470px;
+    height: 500px;
     border: 1px solid #d0d9d4;
     background: #ebf0ee;
     border-radius: 8px;
@@ -363,7 +363,7 @@
     /* border-radius: 50%; */
     background-size: cover;
     background-repeat: no-repeat;
-    transition: .1s ease-in-out;
+    transition: 1s ease-in;
     border-radius: 8px;
     overflow: hidden;
   }
@@ -376,8 +376,9 @@
   .grid_1-item .txt {
     background: white;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+    gap: 5px;
+    display: grid;
+    grid-template-rows: 30% 40% 30%;
     align-items: center;
     position: relative;
     padding: 16px 0;
@@ -550,7 +551,8 @@
     animation: scaleIn 0.5s;
     display: grid;
     grid-template-rows: 30% 0% 22% 35% 10%;
-    row-gap: 10px;
+    grid-template-rows: 45% 12% 20% 23%;
+    row-gap: 2px;
     flex-direction: column;
     align-items: flex-start;
     padding: 16px;
@@ -574,17 +576,28 @@
   .container .pop_head {
     display: flex;
     width: 100%;
+    height: 36px;
+    margin-top: 5%;
     align-content: center;
     justify-content: flex-end;
-    height: 200px;
     background-image: url(./../images/Snapshoot\ Portfolio.svg);
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 8px;
+    padding: 5px 25px;
+    position: absolute;
+    z-index: 1;
+    opacity: .8;
+    transition: 1ms ease-in-out;
+  }
+
+  .container .pop_head:hover{
+    opacity: 1;
   }
 
   .container .grid-item {
     width: auto;
+    padding: 10px 5px;
   }
 
   .container .grid-item img{
@@ -616,6 +629,8 @@
     font-weight: 400;
     font-size: 16px;
     color: #344563;
+    position: relative;
+    
   }
 
   .pop_links {
@@ -1143,7 +1158,7 @@
 
   .grid_1-item {
     width: 100%;
-    height: 450px;
+    height: 500px;
     margin-left: 0;
     margin-bottom: 10px;
   }
@@ -1151,8 +1166,9 @@
   .grid_1-item .txt {
     background: white;
     border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+    gap: 5px;
+    display: grid;
+    grid-template-rows: 30% 40% 30%;
     align-items: center;
     position: relative;
     padding: 16px 0;
@@ -1192,10 +1208,12 @@
     left: 0;
     position: relative;
     width: 41%;
-    height: 98%;
+    height: 90vh;
+    margin-top: 5vh;
     z-index: 11;
     grid-template-rows: 5% 55% 8% 5% 20%;
-    gap: 10px;
+    grid-template-rows: 46% 18% 16% 20%;
+    gap: 2px;
     border: 1px solid #ebecf0;
     box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
     border-radius: 8px;
@@ -1207,9 +1225,10 @@
     width: 100%;
     align-content: center;
     justify-content: flex-end;
-    height: 100%;
+    height: 6%;
     background-image: none;
     border-radius: 8px;
+    padding: 5px 25px;
   }
 
   .pop_head .menu {
@@ -1242,25 +1261,29 @@
 
   .pop_title {
     display: flex;
+    flex-direction: column;
+    gap: 8px;
   }
 
   .pop_title .title {
-    width: 55%;
+    width: 100%;
     height: 100%;
     font-size: 20px;
     font-style: normal;
     font-weight: 700;
     line-height: 25px;
     color: #172b4d;
+    display: flex;
     flex: none;
     order: 0;
     flex-grow: 0;
+    justify-content: center;
   }
 
   .pop_title .d_links {
     display: flex;
     justify-content: flex-end;
-    width: 45%;
+    width: 100%;
   }
 
   .pop_title .d_links .see {
@@ -1279,9 +1302,13 @@
   }
 
   .d_pop_tag_ctn {
+    position: relative;
     display: flex;
     align-content: center;
     align-items: center;
+    height: fit-content;
+    margin-bottom: 5px;
+    /* background: rebeccapurple; */
   }
 
   .d_pop_tag_ctn .tag_ctn {
@@ -1309,7 +1336,9 @@
 
   .pop_details .details {
     width: 100%;
-    height: auto;
+    height: fit-content;
+    margin-bottom: 5px;
+    /* background: rebeccapurple; */
   }
 
   /* ======================================== */
