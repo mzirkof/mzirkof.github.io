@@ -110,7 +110,7 @@ function openPopUp(work=false) {
                     </div>
                     <div class="grid-item pop_title">
                       <span class="title">
-                       Keeping track of hundreds of Mzirkof
+                       ${work.name}
                       </span>
                       <section class="d_links" hidden >
                         <div class="links action_2 centered">
@@ -126,14 +126,16 @@ function openPopUp(work=false) {
                           </button>
                         </div>
                       </section>
-                      <ul class="tag_ctn">
+                      <ul class="tag_ctn">`;
+                      work.technologies.map((key,value)=>{
+                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
+                      })
+                      
+                      pop+=`
                         <li class="tag"><span class="tag_txt">Ruby On Rails</span></li>
                         <li class="tag"><span class="tag_txt">CSS</span></li>
                         <li class="tag"><span class="tag_txt">Javascript</span></li>
-                      </ul>
-                    </div>
-                    <div class="d_pop_tag_ctn">
-                      <ul class="tag_ctn">
+
                         <li class="tag"><span class="tag_txt">CodeKit</span></li>
                         <li class="tag"><span class="tag_txt">Github</span></li>
                         <li class="tag"><span class="tag_txt">Javascript</span></li>
@@ -142,11 +144,17 @@ function openPopUp(work=false) {
                         <li class="tag"><span class="tag_txt">Codepen</span></li>
                       </ul>
                     </div>
+                    <div class="grid-item d_pop_tag_ctn">
+                      <ul class="tag_ctn">`
+                      work.technologies.map(value=>{
+                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
+                      })
+                      pop+=`
+                        
+                      </ul>
+                    </div>
                     <div class="grid-item pop_details">
-                      <div class="details">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
-                      </div>
+                      <div class="details">${work.description}</div>
                     </div>
                     <div class="grid-item pop_links">
                       <div class="links action_2 centered">
