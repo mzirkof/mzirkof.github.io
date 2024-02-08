@@ -500,14 +500,16 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: rgba(193, 199, 208, 0.8);
+    /* background: rgba(193, 199, 208, 01); */
+    background: transparent;
     transition: all 0.5s ease-out;
     justify-content: center;
     align-items: center;
   }
 
   .blured_main {
-    filter: blur(5px);
+    /* filter: blur(5px); */
+    filter: blur(3px);
   }
 
   @keyframes scaleIn {
