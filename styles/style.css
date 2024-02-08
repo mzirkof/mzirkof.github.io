@@ -347,15 +347,31 @@
     flex-direction: column;
     margin-bottom: 20px;
     margin-left: 4%;
+
+    transition: .1s ease-in-out;
+    /* border: 10px solid red; */
   }
+
 
   .grid_1-item .illustration_image{
     position: relative;
-    top: 0;
+    transform: scale(0.96);
+    /* top: 0; */
     height: 50%;
-  }
-  .grid_1-item .illustration_image img {
     width: 100%;
+    /* border: 10px solid red; */
+    /* border-radius: 50%; */
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: .1s ease-in-out;
+    border-radius: 8px;
+    overflow: hidden;
+  }
+  .grid_1-item .illustration_image:hover {
+    transform: scale(1);
+    
+    /* border: 10px solid green; */
+    
   }
   .grid_1-item .txt {
     background: white;
@@ -749,7 +765,7 @@
   .about .grid_2-item {
     width: 96%;
     margin-left: 2%;
-    height: 85vw;
+    height: 90vw;
     background: #ebf0ee;
     border: 1px solid #d0d9d4;
     border-radius: 8px;
@@ -1298,7 +1314,7 @@
 
   /* Headline About me */
   .about_me {
-    height: 630px;
+    height: 680px;
     width: 100vw;
     margin-left: 0;
   }
