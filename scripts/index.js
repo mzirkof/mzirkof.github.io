@@ -25,6 +25,8 @@ document.querySelectorAll('.close').forEach((k) => {
 
 // ============================================================================================
 // Main page : creating dynamically the projects section
+
+
 const works = [
   {
     name: 'Multi-Post Stories Gain+Glory',
@@ -36,11 +38,34 @@ const works = [
     sourceLink: '',
     linkText: 'See Project',
   },
+  {
+    name: 'School Management System ',
+    description: 'Web Application dedicated to manage Secondary Schools. Organising Students and Teacher, notes and Report Cards',
+    featured: 'Add Students,Add notes, Add Topics, Generate PDF cards , Manage old school years',
+    image: 'a.svg',
+    technologies: ['PHP','J Query','TCPDF', 'CSS', 'Javascript', 'HTML'],
+    liveLink: '',
+    sourceLink: '',
+    linkText: 'See Project',
+  },
+  {
+    name: 'One Url Project ',
+    description: 'Web Application dedicated to tinify or shorten URL ',
+    featured: 'Add User with different account types, Save Url and give shorten correspondance, Rediferent a shorten code to the related URL',
+    image: 'b.svg',
+    technologies: ['Python','Axios','React','Rest Framework API','Django', 'CSS', 'Javascript', 'HTML'],
+    liveLink: '',
+    sourceLink: '',
+    linkText: 'See Project',
+  },
 ];
 let workContain = '';
-for (let index = 0; index < 3; index += 1) {
-  const element = works[0];
+for (let index = 0; index < works.length; index += 1) {
+  const element = works[index];
   workContain += `<section class="grid_1-item">
+                    <section class="illustration_image">
+                      <img src="./images/${element.image}" class="">
+                    </section>
                     <section class="txt">
                       <h3 class="project_title">${element.name}</h3>
                       <ul class="tag_ctn">`;
@@ -50,7 +75,7 @@ for (let index = 0; index < 3; index += 1) {
   }
   workContain += `</ul>
                       <section class="action_2 centered">
-                        <button class="see">
+                        <button class="see" id="${index}">
                           <span class="see_txt">${element.linkText}</span>
                         </button>
                       </section>
@@ -64,7 +89,6 @@ workContain = `<section class="title">
               </section>
             <section class="works grid-container">
               ${workContain} 
-              ${workContain}
             </section>`;
 const workSection = document.getElementById('test');
 workSection.innerHTML = `${workContain}`;
@@ -72,8 +96,78 @@ workSection.innerHTML = `${workContain}`;
 // ============================================================================================
 // Actions on btn see details popup
 
-function openPopUp() {
-  const pop = `<section class="container">
+function openPopUp(work=false) {
+  let pop=``;
+
+  pop = `<section class="container">
+                    <div class="grid-item pop_head">
+                      <nav class="menu">
+                        <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_pop">
+                      </nav>
+                    </div>
+                    <div class="grid-item illustration" style="background-image:url(./images/${work.image});">
+                      
+                    </div>
+                    <div class="grid-item pop_title">
+                      <span class="title">
+                       Keeping track of hundreds of Mzirkof
+                      </span>
+                      <section class="d_links" hidden >
+                        <div class="links action_2 centered">
+                          <button class="see">
+                            <span class="see_txt">See Live</span>
+                            <img src="images/Icons/live.svg">
+                          </button>
+                        </div>
+                        <div class="links action_2 centered">
+                          <button class="see">
+                            <span class="see_txt">See Source</span>
+                            <img src="images/Icons/github.svg">
+                          </button>
+                        </div>
+                      </section>
+                      <ul class="tag_ctn">
+                        <li class="tag"><span class="tag_txt">Ruby On Rails</span></li>
+                        <li class="tag"><span class="tag_txt">CSS</span></li>
+                        <li class="tag"><span class="tag_txt">Javascript</span></li>
+                      </ul>
+                    </div>
+                    <div class="d_pop_tag_ctn">
+                      <ul class="tag_ctn">
+                        <li class="tag"><span class="tag_txt">CodeKit</span></li>
+                        <li class="tag"><span class="tag_txt">Github</span></li>
+                        <li class="tag"><span class="tag_txt">Javascript</span></li>
+                        <li class="tag"><span class="tag_txt">Bootstrap</span></li>
+                        <li class="tag"><span class="tag_txt">Terminal</span></li>
+                        <li class="tag"><span class="tag_txt">Codepen</span></li>
+                      </ul>
+                    </div>
+                    <div class="grid-item pop_details">
+                      <div class="details">
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
+                      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
+                      </div>
+                    </div>
+                    <div class="grid-item pop_links">
+                      <div class="links action_2 centered">
+                        <button class="see">
+                          <span class="see_txt">See Live</span>
+                          <img src="images/Icons/live.svg">
+                        </button>
+                      </div>
+                      <div class="links action_2 centered">
+                        <button class="see">
+                          <span class="see_txt">See Source</span>
+                          <img src="images/Icons/github.svg">
+                        </button>
+                      </div>
+                    </div>
+
+                </section>`;
+
+
+  if(work==false) pop = `<section class="container">
                     <div class="grid-item pop_head">
                       <nav class="menu">
                         <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_pop">
@@ -125,13 +219,13 @@ function openPopUp() {
                       <div class="links action_2 centered">
                         <button class="see">
                           <span class="see_txt">See Live</span>
-                          <img src="images/Icons/see live icon.svg">
+                          <img src="./images/Icons/live.svg">
                         </button>
                       </div>
                       <div class="links action_2 centered">
                         <button class="see">
                           <span class="see_txt">See Source</span>
-                          <img src="images/Icons/Vector.svg">
+                          <img src="./images/Icons/githubh.svg">
                         </button>
                       </div>
                     </div>
@@ -153,7 +247,10 @@ function openPopUp() {
 
 for (let i = 0; i < btnPopUp.length; i += 1) {
   const element = btnPopUp[i];
-  element.addEventListener('click', () => { openPopUp(works[0]); });
+  let index =  btnPopUp[i].getAttribute("id");
+  element.addEventListener('click', () => { 
+    (i==0)? openPopUp() : openPopUp(works[index]); 
+  });
 }
 
 // ==================== Form Validation ====================================
