@@ -138,9 +138,9 @@ function openPopUp(work=false) {
                         </div>
                       </section>
                       <ul class="tag_ctn">`;
-                      // work.technologies.map((key,value)=>{
-                      //   pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
-                      // })
+                      work.technologies.map((key,value)=>{
+                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
+                      })
                       
                       pop+=`
                         <li class="tag"><span class="tag_txt">Ruby On Rails</span></li>
@@ -176,7 +176,7 @@ function openPopUp(work=false) {
                       </div>
                       <div class="links action_2 centered">
                         <button class="see">
-                          <span class="see_txt">See Source</span>
+                          <span class="see_txt">See the Source</span>
                           <img src="images/Icons/github.svg">
                         </button>
                       </div>
