@@ -29,10 +29,21 @@ document.querySelectorAll('.close').forEach((k) => {
 
 const works = [
   {
-    name: 'Multi-Post Stories Gain+Glory',
-    description: '',
+    name: 'FullStack Programmer Profile & Works',
+    description: `Hello, I am SOUOP Celestin. It is about 5 years that am working in web Development. It would be pleasant to share and collaborate with you on Web applications.
+    I used to work with pure PHP, HTML, SQL, and Javascript in some projects: 
+   HTML: Page Structure
+   PHP: dealing with session variables, database access (MySQL or Maria DB), dynamic generation of contents
+   Javascript and Jquery: for requests between Database Backend and FrontEnd
+   TCPDF: To generate PDF files such as (user information, payment bills, ...)
+   CSS: for styling and small animations (both Bootstrap and TailwindCSS)
+   
+   Recently, I added Python Django in association with React JS to my skills: It is a very powerful combination 
+    - Django as backend and Rest Framework as API: Database Management is just automatic.
+   - React JS as FrontEnd, Redux for components States and Axios for the requests to the backend: Web interfaces are easily reproduced and managed
+   Let us work together on projects using Django and TailWindCSS. `,
     featured: '',
-    image: '',
+    image: '/projects/a.jpg',
     technologies: ['Ruby on Rails', 'CSS', 'Javascript', 'HTML'],
     liveLink: '',
     sourceLink: '',
@@ -42,7 +53,7 @@ const works = [
     name: 'School Management System ',
     description: 'Web Application dedicated to manage Secondary Schools. Organising Students and Teacher, notes and Report Cards',
     featured: 'Add Students,Add notes, Add Topics, Generate PDF cards , Manage old school years',
-    image: 'a.svg',
+    image: '/projects/f.jpg',
     technologies: ['PHP','J Query','TCPDF', 'CSS', 'Javascript', 'HTML'],
     liveLink: '',
     sourceLink: '',
@@ -52,7 +63,7 @@ const works = [
     name: 'One Url Project ',
     description: 'Web Application dedicated to tinify or shorten URL ',
     featured: 'Add User with different account types, Save Url and give shorten correspondance, Rediferent a shorten code to the related URL',
-    image: 'img.jpg',
+    image: '/projects/x.png',
     technologies: ['Python','Axios','React','Rest Framework API','Django', 'CSS', 'Javascript', 'HTML'],
     liveLink: '',
     sourceLink: '',
@@ -100,7 +111,7 @@ function openPopUp(work=false) {
   let pop=``;
 
   pop = `<section class="container">
-                    <div class="grid-item pop_head">
+                    <div class="pop_head">
                       <nav class="menu">
                         <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_pop">
                       </nav>
@@ -127,9 +138,9 @@ function openPopUp(work=false) {
                         </div>
                       </section>
                       <ul class="tag_ctn">`;
-                      work.technologies.map((key,value)=>{
-                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
-                      })
+                      // work.technologies.map((key,value)=>{
+                      //   pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
+                      // })
                       
                       pop+=`
                         <li class="tag"><span class="tag_txt">Ruby On Rails</span></li>
@@ -255,7 +266,7 @@ for (let i = 0; i < btnPopUp.length; i += 1) {
   const element = btnPopUp[i];
   let index =  btnPopUp[i].getAttribute("id");
   element.addEventListener('click', () => { 
-    (i==0)? openPopUp() : openPopUp(works[index]); 
+    openPopUp(works[index]); 
   });
 }
 
