@@ -29,7 +29,7 @@ document.querySelectorAll('.close').forEach((k) => {
 
 const works = [
   {
-    name: 'FullStack Programmer Profile & Works',
+    name: 'Full-Stack Programmer Profile & Works',
     description: `Hello, I am SOUOP Celestin. It is about 5 years that am working in web Development. It would be pleasant to share and collaborate with you on Web applications.
     I used to work with pure PHP, HTML, SQL, and Javascript in some projects: 
    HTML: Page Structure
@@ -138,9 +138,9 @@ function openPopUp(work=false) {
                         </div>
                       </section>
                       <ul class="tag_ctn">`;
-                      work.technologies.map((key,value)=>{
-                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
-                      })
+                      // work.technologies.map((key,value)=>{
+                      //   pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
+                      // })
                       
                       pop+=`
                         <li class="tag"><span class="tag_txt">Ruby On Rails</span></li>
@@ -157,9 +157,9 @@ function openPopUp(work=false) {
                     </div>
                     <div class="grid-item d_pop_tag_ctn">
                       <ul class="tag_ctn">`
-                      work.technologies.map(value=>{
-                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
-                      })
+                      // work.technologies.map(value=>{
+                      //   pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
+                      // })
                       pop+=`
                         
                       </ul>
