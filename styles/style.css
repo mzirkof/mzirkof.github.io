@@ -107,8 +107,21 @@
   }
 
   #close_pop {
-    width: 52px;
-    height: 55px;
+    width: 100%;
+    height: 100%;
+  }
+
+  .container .pop_head .menu{
+    background: red;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    opacity: .8;
+    z-index: 1;
+    transition: 1ms ease-in-out;
+  }
+
+  .container .pop_head .menu:hover{
+    opacity: 1;
   }
 
   .mobile_menu .nav_ctn {
@@ -542,22 +555,22 @@
   .pop_up .container {
     position: absolute;
     width: 90%;
-    height: auto;
+    height: 96%;
     left: calc(50% - 90% / 2);
-    top: 20px;
+    top: 2%;
     background: #fff;
     border: 1px solid #dfe1e6;
-    border-radius: 16px;
+    border-radius: 14px;
     animation: scaleIn 0.5s;
     display: grid;
-    grid-template-rows: 30% 0% 22% 35% 10%;
-    grid-template-rows: 45% 12% 20% 23%;
+    grid-template-rows: 45% 10% 15% 15% 14%;
+    /* grid-template-rows: 45% 16% 16% 23%; */
     row-gap: 2px;
     flex-direction: column;
     align-items: flex-start;
-    padding: 16px;
+    padding: 10px;
   }
-
+  
   .pop_down {
     display: flex;
     position: fixed;
@@ -576,11 +589,11 @@
   .container .pop_head {
     display: flex;
     width: 100%;
-    height: 36px;
+    height: 6%;
     margin-top: 5%;
     align-content: center;
     justify-content: flex-end;
-    background-image: url(./../images/Snapshoot\ Portfolio.svg);
+    /* background-image: url(./../images/Snapshoot\ Portfolio.svg); */
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 8px;
@@ -595,9 +608,21 @@
     opacity: 1;
   }
 
+  .container .illustration {
+    width: 100%;
+    height: 100%;
+    /* background-image: url(./../images/Snapshoot\ Portfolio\ Desktop.svg); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #dfe1e6;
+    border-radius: 15px;
+  }
+
+
+
   .container .grid-item {
-    width: auto;
-    padding: 10px 5px;
+    /* width: auto; */
+    padding: 0px 5px;
   }
 
   .container .grid-item img{
@@ -630,6 +655,11 @@
     font-size: 16px;
     color: #344563;
     position: relative;
+    font-size: .8em;
+    max-height: 120px;
+    overflow-y: auto;
+    text-indent: 15px;
+    text-justify: center;
     
   }
 
@@ -1212,7 +1242,7 @@
     margin-top: 5vh;
     z-index: 11;
     grid-template-rows: 5% 55% 8% 5% 20%;
-    grid-template-rows: 46% 18% 16% 20%;
+    grid-template-rows: 45% 16% 16% 23%;
     gap: 2px;
     border: 1px solid #ebecf0;
     box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
@@ -1239,6 +1269,8 @@
     width: 2.5vw;
     height: 100%;
     background: #ebecf0;
+    background: #111;
+    border: 1px solid #ebecf0;
     mix-blend-mode: multiply;
     border-radius: 8px;
   }
