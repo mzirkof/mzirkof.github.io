@@ -76,7 +76,7 @@ const works = [
     description: `<h2>One Url Project</h2>Web Application dedicated to tinify or shorten URL `,
     featured: 'Add User with different account types, Save Url and give shorten correspondance, Rediferent a shorten code to the related URL',
     image: '/projects/x.png',
-    technologies: ['Python','Axios','React','Rest Framework API','Django', 'CSS', 'Javascript', 'HTML'],
+    technologies: ['Python','Axios','React JS','Redux','Rest Framework API','Django', 'TailWind CSS', 'Javascript', 'PostGreSQL','HTML'],
     liveLink: '',
     sourceLink: '',
     linkText: 'See Project',
