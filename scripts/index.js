@@ -30,7 +30,7 @@ document.querySelectorAll('.close').forEach((k) => {
 const works = [
   {
     name: 'Full-Stack Programmer Profile & Works',
-    description: `Hello, I am SOUOP Celestin. It is about 5 years that am working in web Development. It would be pleasant to share and collaborate with you on Web applications.
+    description: `<h2>Full-Stack Programmer Profile</h2>Hello, I am SOUOP Celestin. It is about 5 years that am working in web Development. It would be pleasant to share and collaborate with you on Web applications.
     I used to work with pure PHP, HTML, SQL, and Javascript in some projects: 
    HTML: Page Structure
    PHP: dealing with session variables, database access (MySQL or Maria DB), dynamic generation of contents
@@ -49,9 +49,21 @@ const works = [
     sourceLink: '',
     linkText: 'See Project',
   },
+  
+  {
+    name: 'Responsive PortFolio ',
+    description: `<h2>Responsive PortFolio</h2>Web Application that Present Celestin SOUOP's Developper Profile. This PorFolio is Build Applying Mobile First Philosophie : which makes it a completely Multiscreams responsive app.
+    Using Html, Javascipt and CSS. Features like Modal Popup, Mobile and Desktop menu , Cards Building with Both grid & FlexBox display are used .`,
+    featured: '',
+    image: '/projects/portfolio.png',
+    technologies: ['HTML','JSON', 'CSS', 'Javascript'],
+    liveLink: '',
+    sourceLink: '',
+    linkText: 'See Project',
+  },
   {
     name: 'School Management System ',
-    description: 'Web Application dedicated to manage Secondary Schools. Organising Students and Teacher, notes and Report Cards',
+    description: `<h2>School Management System</h2> Web Application dedicated to manage Secondary Schools. Organising Students and Teacher, notes and Report Cards`,
     featured: 'Add Students,Add notes, Add Topics, Generate PDF cards , Manage old school years',
     image: '/projects/f.jpg',
     technologies: ['PHP','J Query','TCPDF', 'CSS', 'Javascript', 'HTML'],
@@ -61,7 +73,7 @@ const works = [
   },
   {
     name: 'One Url Project ',
-    description: 'Web Application dedicated to tinify or shorten URL ',
+    description: `<h2>One Url Project</h2>Web Application dedicated to tinify or shorten URL `,
     featured: 'Add User with different account types, Save Url and give shorten correspondance, Rediferent a shorten code to the related URL',
     image: '/projects/x.png',
     technologies: ['Python','Axios','React','Rest Framework API','Django', 'CSS', 'Javascript', 'HTML'],
@@ -116,9 +128,10 @@ function openPopUp(work=false) {
                         <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_pop">
                       </nav>
                     </div>
+
                     <div class="grid-item illustration" style="background-image:url(./images/${work.image});">
-                      
                     </div>
+
                     <div class="grid-item pop_title">
                       <span class="title">
                        ${work.name}
@@ -138,35 +151,28 @@ function openPopUp(work=false) {
                         </div>
                       </section>
                       <ul class="tag_ctn">`;
-                      // work.technologies.map((key,value)=>{
-                      //   pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
-                      // })
+                      work.technologies.map((value)=>{
+                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
+                      })
                       
                       pop+=`
-                        <li class="tag"><span class="tag_txt">Ruby On Rails</span></li>
-                        <li class="tag"><span class="tag_txt">CSS</span></li>
-                        <li class="tag"><span class="tag_txt">Javascript</span></li>
-
-                        <li class="tag"><span class="tag_txt">CodeKit</span></li>
-                        <li class="tag"><span class="tag_txt">Github</span></li>
-                        <li class="tag"><span class="tag_txt">Javascript</span></li>
-                        <li class="tag"><span class="tag_txt">Bootstrap</span></li>
-                        <li class="tag"><span class="tag_txt">Terminal</span></li>
-                        <li class="tag"><span class="tag_txt">Codepen</span></li>
                       </ul>
                     </div>
+
                     <div class="grid-item d_pop_tag_ctn">
                       <ul class="tag_ctn">`
-                      // work.technologies.map(value=>{
-                      //   pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
-                      // })
+                      work.technologies.map(value=>{
+                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
+                      })
                       pop+=`
                         
                       </ul>
                     </div>
+
                     <div class="grid-item pop_details">
                       <div class="details">${work.description}</div>
                     </div>
+
                     <div class="grid-item pop_links">
                       <div class="links action_2 centered">
                         <button class="see">
@@ -176,7 +182,7 @@ function openPopUp(work=false) {
                       </div>
                       <div class="links action_2 centered">
                         <button class="see">
-                          <span class="see_txt">See the Source</span>
+                          <span class="see_txt">See Source</span>
                           <img src="images/Icons/github.svg">
                         </button>
                       </div>
@@ -185,69 +191,6 @@ function openPopUp(work=false) {
                 </section>`;
 
 
-  if(work==false) pop = `<section class="container">
-                    <div class="grid-item pop_head">
-                      <nav class="menu">
-                        <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_pop">
-                      </nav>
-                    </div>
-                    <div class="grid-item illustration"></div>
-                    <div class="grid-item pop_title">
-                      <span class="title">
-                       Keeping track of hundreds of components
-                      </span>
-                      <section class="d_links" hidden >
-                        <div class="links action_2 centered">
-                          <button class="see">
-                            <span class="see_txt">See Live</span>
-                            <img src="images/Icons/see live icon.svg">
-                          </button>
-                        </div>
-                        <div class="links action_2 centered">
-                          <button class="see">
-                            <span class="see_txt">See Source</span>
-                            <img src="images/Icons/Vector.svg">
-                          </button>
-                        </div>
-                      </section>
-                      <ul class="tag_ctn">
-                        <li class="tag"><span class="tag_txt">Ruby On Rails</span></li>
-                        <li class="tag"><span class="tag_txt">CSS</span></li>
-                        <li class="tag"><span class="tag_txt">Javascript</span></li>
-                      </ul>
-                    </div>
-                    <div class="d_pop_tag_ctn">
-                      <ul class="tag_ctn">
-                        <li class="tag"><span class="tag_txt">CodeKit</span></li>
-                        <li class="tag"><span class="tag_txt">Github</span></li>
-                        <li class="tag"><span class="tag_txt">Javascript</span></li>
-                        <li class="tag"><span class="tag_txt">Bootstrap</span></li>
-                        <li class="tag"><span class="tag_txt">Terminal</span></li>
-                        <li class="tag"><span class="tag_txt">Codepen</span></li>
-                      </ul>
-                    </div>
-                    <div class="grid-item pop_details">
-                      <div class="details">
-                      Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                      Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,  Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s.
-                      </div>
-                    </div>
-                    <div class="grid-item pop_links">
-                      <div class="links action_2 centered">
-                        <button class="see">
-                          <span class="see_txt">See Live</span>
-                          <img src="./images/Icons/live.svg">
-                        </button>
-                      </div>
-                      <div class="links action_2 centered">
-                        <button class="see">
-                          <span class="see_txt">See Source</span>
-                          <img src="./images/Icons/githubh.svg">
-                        </button>
-                      </div>
-                    </div>
-
-                </section>`;
   popUpWindows.innerHTML = `${pop}`;
   popUpWindows.className = 'pop_up';
 
