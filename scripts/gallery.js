@@ -13,6 +13,8 @@ let datas=[
     'a.jpg',
     'f.jpg',
     'portfolio.png',
+    'e.jpg',
+    'm.png',
     'x.png',
 ]
 
