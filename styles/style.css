@@ -1135,7 +1135,7 @@
     justify-content: space-between;
     height: 40%;
     margin-top: 10px;
-    width: calc(30% + 240px);
+    width: calc(15% + 240px);
   }
 
   .nav_ctn li {
