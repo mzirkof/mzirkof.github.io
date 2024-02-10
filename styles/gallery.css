@@ -96,7 +96,7 @@
         background-size: cover;
         height: 100%;
         opacity: .9;
-        background: red;
+        /* background: red; */
         /* display: flex; */
         justify-content: center;
         align-items: center;
