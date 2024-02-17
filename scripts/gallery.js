@@ -22,7 +22,7 @@ let datas=[
 function showGallery() {
     // galleryWindows.innerHTML = `${pop}`;
 
-    let delai = 1000*5;
+    let delai = 1000*8;
     let interval=setInterval(() => {
       moveImg()
     }, delai);
