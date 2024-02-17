@@ -347,20 +347,26 @@
   }
 
   .grid-container {
-    display: grid;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 15%;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
   }
 
   .grid_1-item {
-    width: 92%;
+    width: 380px;
     height: 500px;
     border: 1px solid #d0d9d4;
     background: #ebf0ee;
     border-radius: 8px;
     display: flex;
     flex-direction: column;
-    margin-bottom: 20px;
-    margin-left: 4%;
-    padding: 2px 5px;
+    /* margin-bottom: 20px;
+    margin-left: 4%; */
+    padding: 10px 20px;
 
     transition: .1s ease-in-out;
     /* border: 10px solid red; */
@@ -827,21 +833,23 @@
 
   .about_me .about {
     margin-top: 100px;
+    width: 80%;
   }
 
   .grid2-container {
     display: grid;
-    
+    justify-content: center;
   }
 
   .about .grid_2-item {
-    width: 96%;
-    margin-left: 2%;
-    height: 90vw;
+    width: 320px;
+    /* margin-left: 2%; */
+    height: 360px;
     background: #ebf0ee;
     border: 1px solid #d0d9d4;
     border-radius: 8px;
     display: flex;
+    padding: 10px;
     flex-direction: column;
     margin-bottom: 20px;
   }
@@ -928,6 +936,8 @@
   .skills_list {
     list-style: none;
     width: 100vw;
+    display: flex;
+    justify-content: center;
   }
 
   /* ============================================================================================================================= */
@@ -1206,19 +1216,24 @@
   }
 
   .r_works .grid-container {
-    display: grid;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     grid-template-columns: 1fr 1fr 1fr;
-    width: calc(55% + 250px);
-    grid-gap: 8px;
-    justify-items: center;
-    margin-bottom: 100px;
+    /* width: calc(55% + 250px); */
+    width: 100%;
+    grid-gap: 10px;
+    /* justify-items: center; */
+    /* margin-bottom: 100px; */
+    padding: 10px 50px;
   }
 
   .grid_1-item {
-    width: 100%;
-    height: 500px;
+    width: 350px;
+    height: 600px;
     margin-left: 0;
     margin-bottom: 10px;
+    padding: 10px 1px;
   }
 
   .grid_1-item .txt {
@@ -1469,10 +1484,10 @@
 
   .about_me .about {
     margin-top: 0;
-    margin-bottom: 30px;
+    /* margin-bottom: 30px; */
     position: relative;
     width: calc(55% + 250px);
-    width: 100%;
+    width: 700px;
     height: 316px;
     /* height: 460px; */
     /* margin-left: calc((100% - (55% + 250px)) / 2); */
