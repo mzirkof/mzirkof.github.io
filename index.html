@@ -9,15 +9,26 @@
   <!-- Linking the page to the style file A.css -->
   <link rel="stylesheet" href="./styles/style.css">
   <link rel="stylesheet" href="./styles/gallery.css">
+
+
+  <!-- Styles pour le premier projet. En attendant un meilleure code pour mieux l'integrer de maniere dynamique avec Javascript -->
+  <link rel="stylesheet" href="./scripts/Windows/ProjectsDone/Site B/css/index.css">
+  <link rel="stylesheet" href="./scripts/Windows/ProjectsDone/Site B/css/neonsDeco.css">
+
+
+  <!-- TicTacToe style css file -->
+  <link rel="stylesheet" href="./scripts/Windows/ProjectsDone/TicTacToe/css/tttGame.css">
   
 </head>
 <body>
-
   <div class="main">
       <!-- Toollbar ( Icon and Menu )  -->
       <header class="toolbar" id="toolbar">
-        <a href="./index.html" class="logo">
-          MZK
+        <a href="./index.html" class="logo desktop">
+          👩‍💻 MZIRKOF 👋
+        </a>
+        <a href="./index.html" class="logo mobile">
+          👩‍💻 MZK 👋
         </a>
         <nav class="menu">
           <img src="images/Union.png" alt="" id="menu_icon">
@@ -27,7 +38,7 @@
             <li><a class="nav_item" href="#r_works">PortFolio</a></li>
             <li><a class="nav_item" href="#about_me">About</a></li>
             <li><a class="nav_item" href="#contact">Contact</a></li>
-            <li><a class="nav_item" id="gallery">Gallery</a></li>
+            <li><a class="nav_item" id="gallery">Images Gallery</a></li>
           </ul>
         </nav>
       </header>
@@ -203,10 +214,51 @@
         <hr>
       </footer>
     </div>
+    <section id="bottom_menu">
+      <div class="section_container btMenuCtn">
+        <div class="project">
+          <section class="project_circle" id="p0">
+            <div class="section_container"></div>
+          </section>
+          <span class="project_name">Site B</span>
+        </div>
+
+
+        <div class="project">
+          <section class="project_circle" id="p1">
+            <!-- <div class="section_container" id="mainTttGame"></div> -->
+            <div class="section_container" ></div>
+          </section>
+          <span class="project_name">Tic Tac Toe Game</span>
+        </div>
+        
+        
+      </div>
+    </section>
     <section id="pop_up" hidden></section>
     <section id="galleryContainer" hidden></section>
-
+    <section id="windows"></section>
+    
 <script src="scripts/index.js"></script>
 <script src="scripts/gallery.js"></script>
+
+<!-- script des fenetres modales -->
+<script src="scripts/Windows/windowsFunctions.js"></script>
+<script src="scripts/Windows/windowSet.js"></script>
+
+
+<!-- script de la fenetre du projet nomme site B id du bouton : p0 -->
+<script src="scripts/Windows/ProjectsDone/siteB.js"></script>
+<script src="scripts/Windows/ProjectsDone/Site B/js/bulles.js"></script>
+<script src="scripts/Windows/ProjectsDone/Site B/js/decoFunctions.js"></script>
+<script src="scripts/Windows/ProjectsDone/Site B/js/neons.js"></script>
+<script src="scripts/Windows/ProjectsDone/Site B/js/index.js"></script>
+
+
+<!-- TicTacToe Game script ; button id : p1 -->
+<script src="scripts/Windows/ProjectsDone/TicTacToe.js"></script>
+<script src="scripts/Windows/ProjectsDone/TicTacToe/js/tictactoeGame.js"></script>
+
+
 </body>
 </html>
