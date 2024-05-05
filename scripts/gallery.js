@@ -6,6 +6,7 @@ let galleryWindows = document.getElementById('galleryContainer')
 
 btnGallery.addEventListener('click',e=>{
     e.preventDefault()
+    // alert()
     showGallery()
 })
 
@@ -16,6 +17,8 @@ let datas=[
     'e.jpg',
     'm.png',
     'x.png',
+    'SiteBCapture.png',
+    'TttCapture.png',
 ]
 
 
@@ -26,8 +29,11 @@ function showGallery() {
     let interval=setInterval(() => {
       moveImg()
     }, delai);
-    galleryWindows.className = 'pop_up';
-    main.classList.add('blured_main')
+
+    // galleryWindows.className = 'pop_up';
+    // main.classList.add('blured_main')
+
+    
 
     let imgIndex=0
 
@@ -36,7 +42,7 @@ function showGallery() {
   pop = `<section class="container gallery_ctn">
                     <div class="pop_head">
                       <nav class="menu">
-                        <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_pop">
+                        <img src="images/Normal Button/Tertiary/Enabled.svg" class="close_pop" alt="" id="close_gallery">
                       </nav>
                     </div>
                     <div class="grid-item pop_title">
@@ -64,18 +70,23 @@ function showGallery() {
                 </section>`;
 
 
-  galleryWindows.innerHTML = `${pop}`;
-  galleryWindows.className = 'pop_up';
-
-  main.classList.add('blured_main');
+    galleryWindows.innerHTML = `${pop}`;
+    galleryWindows.className = 'pop_up';
+    main.classList.add('blured_main');
+    
+    // Removing scrolling possibility
+    let body=document.getElementsByTagName('body')[0]
+    body.classList.add('no_scroll');
 
   const popContainer = document.querySelector('.container');
-  const btnClosePop = document.getElementById('close_pop');
+  const btnClosePop = document.getElementById('close_gallery');
   btnClosePop.addEventListener('click', () => {
     main.classList.remove('blured_main');
     galleryWindows.className = 'pop_down';
     popContainer.style.display = 'none';
-    imgIndex=0;
+    // imgIndex=0;
+    body.classList.remove('no_scroll');
+    clearInterval(interval)
     clearTimeout(timeOut)
   });
 
