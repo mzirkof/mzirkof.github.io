@@ -81,6 +81,26 @@ const works = [
     sourceLink: '',
     linkText: 'See Project',
   },
+  {
+    name: 'Site B Project ',
+    description: `<h2>Site B Project</h2>A One page Informative Web Application `,
+    featured: 'Used Figma for designing the application, Managing CSS and Javascript Annimations, Disposing component in web Apllication with CSS flexBox, Dealing with sizes ,Shapes and shadows',
+    image: '/projects/SiteBCapture.png',
+    technologies: ['Figma','CSS', 'Javascript', ,'HTML'],
+    liveLink: '',
+    sourceLink: '',
+    linkText: 'See Project',
+  },
+  {
+    name: 'Online TicTacToe Game ',
+    description: `<h2>Iic Tac Toe Game </h2>Web Application that Implement the logic and GamePlay of the legendary Morpion known as TicTacToe . Two players cans have fun online `,
+    featured: 'Control the matrix of the game map, Check if there is a winner, Let players play their turn',
+    image: '/projects/TttCapture.png',
+    technologies: ['CSS', 'Javascript', 'HTML'],
+    liveLink: '',
+    sourceLink: '',
+    linkText: 'See Project',
+  },
 ];
 let workContain = '';
 for (let index = 0; index < works.length; index += 1) {
@@ -195,6 +215,9 @@ function openPopUp(work=false) {
   popUpWindows.className = 'pop_up';
 
   main.classList.add('blured_main');
+  // Removing scrolling possibility
+  let body=document.getElementsByTagName('body')[0]
+  body.classList.add('no_scroll');
 
   const popContainer = document.querySelector('.container');
   const btnClosePop = document.getElementById('close_pop');
@@ -202,6 +225,7 @@ function openPopUp(work=false) {
     main.classList.remove('blured_main');
     popUpWindows.className = 'pop_down';
     popContainer.style.display = 'none';
+    body.classList.remove('no_scroll');
   });
 }
 
