@@ -34,7 +34,7 @@
 }
 
 /* Mobile Version of screen smaller than considered ( < 375px) */
-@media (max-width: 375px) {
+@media (max-width: 350px) {
   body {
     display: flex;
     overflow:hidden;
@@ -47,7 +47,7 @@
 }
 
 /* Mobile version for phone with considered screen size minimum 375px */
-@media (min-width: 375px) {
+@media (min-width: 350px) {
   .toolbar .navigation,
   .img_bg2,
   .img_bg3,
@@ -67,7 +67,9 @@
     top: 0;
     z-index: 10;
     width: 98vw;
-    height: 72px;
+    width: 100vw;
+    height: 52px;
+    /* height: 72px; */
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,10 +97,12 @@
   @keyframes turn_go {
     0% {
       transform: translateX(100vw);
+      /* transform: scale(.5); */
     }
 
     100% {
       transform: translateX(0);
+      /* transform: scale(1); */
     }
   }
 
@@ -167,12 +171,13 @@
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: 600;
-    font-size: 32px;
+    font-size: 18px;
     line-height: 44px;
     position: absolute;
     height: 24px;
     left: 10vw;
     color: #3a4a42;
+    color: #36b37e;
   }
 
   .toolbar .logo {
@@ -187,12 +192,12 @@
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: bolder;
-    font-size: 20px;
+    font-size: 16px;
     letter-spacing: 3px;
     color: #36b37e;
     text-decoration: none;
     justify-content: center;
-    transform: rotate(90 deg);
+    /* transform: scale(90 deg); */
     transition: all 1s ease-out;
     animation: rotate 3s;
   }
@@ -204,11 +209,13 @@
 
   @keyframes rotate {
     0% {
-      transform: rotate(0deg);
+      /* transform: rotate(0deg); */
+      transform: scale(.9);
     }
 
     100% {
-      transform: rotate(360deg);
+      /* transform: rotate(360deg); */
+      transform: scale(1);
     }
   }
 
@@ -246,7 +253,7 @@
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: bolder;
-    font-size: 45px;
+    font-size: 40px;
     line-height: 60px;
     text-align: center;
     color: #172b4d;
