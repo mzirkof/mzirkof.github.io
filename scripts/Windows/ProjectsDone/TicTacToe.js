@@ -6,7 +6,7 @@ const tttGame=`
 <link rel="stylesheet" href="./css/tttGame.css">
 </head>
 <body>
-    Just Have Fun Online between while visiting the Web Application
+    Just Have Fun Online while visiting the Web Application
 
     <div id="mainTttGame">
     <div class="container mainGameCtn">
