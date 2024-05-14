@@ -1,11 +1,7 @@
-const root =`${rootLocation}ProjectsDone/SiteB/`
-const cssFiles=`<link rel="stylesheet" href="${root}css/index.css">`
-addNodeChild(parentId,cssFiles)
-const siteB=`
-
-
-
-
+const root = `${rootLocation}ProjectsDone/SiteB/`;
+const cssFiles = `<link rel="stylesheet" href="${root}css/index.css">`;
+addNodeChild(parentId, cssFiles);
+let siteB = `
     <link rel="stylesheet" href="${root}css/index.css">
     <link rel="stylesheet" href="./css/neonsDeco.css">
 <body id="body">
@@ -147,4 +143,4 @@ const siteB=`
 
 
 
-`
+`;

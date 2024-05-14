@@ -1,7 +1,7 @@
-const root2 =`${rootLocation}ProjectsDone/TicTacToe/`
-const cssFiles2=`<link rel="stylesheet" href="${root2}css/tttGame.css">`
-addNodeChild(parentId,cssFiles2)
-const tttGame=`
+const root2 = `${rootLocation}ProjectsDone/TicTacToe/`;
+const cssFiles2 = `<link rel="stylesheet" href="${root2}css/tttGame.css">`;
+addNodeChild(parentId, cssFiles2);
+const tttGame = `
 
 <link rel="stylesheet" href="./css/tttGame.css">
 </head>
@@ -19,9 +19,9 @@ const tttGame=`
 <script type="module" src="./js/methodes.js"></script>
 <script type="module" src="./js/tictactoeGame.js"></script>
 
-`
+`;
 
-const tttGame2=`
+const tttGame2 = `
 
 <link rel="stylesheet" href="./css/tttGame.css">
 </head>
@@ -49,4 +49,4 @@ const tttGame2=`
 <script type="module" src="./js/methodes.js"></script>
 <script type="module" src="./js/tictactoeGame.js"></script>
 
-`
+`;

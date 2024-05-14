@@ -1,43 +1,28 @@
+const btnGallery = document.getElementById('gallery');
 
-let btnGallery= document.getElementById('gallery')
-
-let galleryWindows = document.getElementById('galleryContainer')
+const galleryWindows = document.getElementById('galleryContainer');
+let timeOut;
+let interval;
 // const main = document.querySelector('.main');
+const pageBody = document.getElementById('mainPage');
 
-btnGallery.addEventListener('click',e=>{
-    e.preventDefault()
-    // alert()
-    showGallery()
-})
-
-let datas=[
-    'a.jpg',
-    'f.jpg',
-    'portfolio.png',
-    'e.jpg',
-    'm.png',
-    'x.png',
-    'SiteBCapture.png',
-    'TttCapture.png',
-]
-
+const images = [
+  'a.jpg',
+  'f.jpg',
+  'portfolio.png',
+  'e.jpg',
+  'm.png',
+  'x.png',
+  'SiteBCapture.png',
+  'TttCapture.png',
+];
 
 function showGallery() {
-    // galleryWindows.innerHTML = `${pop}`;
+  const delay = 1000 * 8;
 
-    let delai = 1000*8;
-    let interval=setInterval(() => {
-      moveImg()
-    }, delai);
+  let imgIndex = 0;
 
-    // galleryWindows.className = 'pop_up';
-    // main.classList.add('blured_main')
-
-    
-
-    let imgIndex=0
-
-    let pop=``;
+  let pop = '';
 
   pop = `<section class="container gallery_ctn">
                     <div class="pop_head">
@@ -54,144 +39,138 @@ function showGallery() {
                         <div class="view">
                             <div class="img_view" hidden>Previous Image</div>
                             <div class="img_view currentImgView" id="currentImgView" style="display:flex;">
-                                <div class="img" id="current" style="background-image:url(./images/projects/${datas[imgIndex]});"></div>
+                                <div class="img" id="current" style="background-image:url(./images/projects/${images[imgIndex]});"></div>
                             </div>
                             <div class="img_view" id="nextImgView" hidden>Next Image</div>
                         </div>
-                        <div class="track">`
-                            datas.map((value,key)=>{
-                                pop+=(key===0)? `<div class="dot current_dot" id="dot_${key}"></div>`:`<div class="dot " id="dot_${key}"></div>`
-                            })
+                        <div class="track">`;
+  images.map((value, key) => {
+    pop += (key === 0) ? `<div class="dot current_dot" id="dot_${key}"></div>` : `<div class="dot " id="dot_${key}"></div>`;
+    return 1;
+  });
 
-                        pop+=`
+  pop += `
                             
                         </div>
                     </div>
                 </section>`;
 
+  galleryWindows.innerHTML = `${pop}`;
+  galleryWindows.className = 'pop_up';
+  pageBody.classList.add('blured_main');
 
-    galleryWindows.innerHTML = `${pop}`;
-    galleryWindows.className = 'pop_up';
-    main.classList.add('blured_main');
-    
-    // Removing scrolling possibility
-    let body=document.getElementsByTagName('body')[0]
-    body.classList.add('no_scroll');
+  // Removing scrolling possibility
+  const body = document.getElementsByTagName('body')[0];
+  body.classList.add('no_scroll');
 
   const popContainer = document.querySelector('.container');
   const btnClosePop = document.getElementById('close_gallery');
+
+  function changeImg(imgIndex, direction = 1, v = 0) {
+    // console.log('Changing image annimation');
+
+    clearTimeout(timeOut);
+    const currentView = document.getElementsByClassName('currentImgView')[0];
+
+    const navBtn = document.getElementsByClassName('img_nav');
+    navBtn[0].style.display = 'none';
+    navBtn[1].style.display = 'none';
+
+    switch (v) {
+      case 1: {
+        if (direction === 1) {
+          // passage au suivant
+          currentView.style.transform = 'translateX(-100%)';
+        } else {
+          // passage au precedent
+          currentView.style.transform = 'translateX(100%)';
+        }
+
+        timeOut = setTimeout(() => {
+          currentView.style.display = 'none';
+          document.getElementById('current').style.backgroundImage = `url(./images/projects/${images[imgIndex]})`;
+          timeOut = setTimeout(() => {
+            currentView.style.transform = 'translateX(0)';
+            currentView.style.display = 'flex';
+            timeOut = setTimeout(() => {
+              navBtn[0].style.display = 'flex';
+              navBtn[1].style.display = 'flex';
+            }, 1400);
+          }, 400);
+        }, 900);
+        break;
+      }
+
+      case 2: {
+        timeOut = 0;
+        break;
+      }
+
+      default:
+      {
+        document.getElementById('current').style.backgroundImage = `url(./images/projects/${images[imgIndex]})`;
+        break;
+      }
+    }
+  }
+
+  function moveImg(direction = 1) {
+    // console.log(imgIndex)
+    clearInterval(interval);
+    if (direction === 1) {
+      if (imgIndex < (images.length - 1)) imgIndex += 1; else imgIndex = 0;
+
+      // Remove current dot
+      document.getElementsByClassName('current_dot')[0].classList.remove('current_dot');
+
+      // Changement d'image
+      changeImg(imgIndex, 1, 1);
+      // Set next dot
+      document.getElementById(`dot_${imgIndex}`).classList.add('current_dot');
+    } else {
+      if (imgIndex === 0) imgIndex = images.length - 1; else imgIndex -= 1;
+
+      // Remove current dot
+      document.getElementsByClassName('current_dot')[0].classList.remove('current_dot');
+
+      // Set next dot
+      document.getElementById(`dot_${imgIndex}`).classList.add('current_dot');
+      // Changement d'image
+      changeImg(imgIndex, 0, 1);
+    }
+
+    interval = setInterval(() => {
+      moveImg();
+    }, delay);
+  }
+
+  interval = setInterval(() => {
+    moveImg();
+  }, delay);
+
   btnClosePop.addEventListener('click', () => {
-    main.classList.remove('blured_main');
+    pageBody.classList.remove('blured_main');
     galleryWindows.className = 'pop_down';
     popContainer.style.display = 'none';
     // imgIndex=0;
     body.classList.remove('no_scroll');
-    clearInterval(interval)
-    clearTimeout(timeOut)
+    clearInterval(interval);
+    clearTimeout(timeOut);
   });
 
-  const btnNext = document.getElementById('nextImg').addEventListener('click',e=>{
-    // document.getElementById('dot_'+imgIndex).classList.remove('selected_dot')
-    // console.log(document.getElementById(`dot_${imgIndex}`))
-    clearInterval(interval)
-    moveImg()
-  })
+  document.getElementById('nextImg').addEventListener('click', () => {
+    clearInterval(interval);
+    moveImg();
+  });
 
-  const btnPrev = document.getElementById('prevImg').addEventListener('click',e=>{
-    clearInterval(interval)
-    moveImg(-1)
-  })
-
-  function moveImg(direction=1) {
-    // console.log(imgIndex)
-    clearInterval(interval)
-    if(direction==1){
-      (imgIndex<(datas.length-1))? imgIndex++ : imgIndex=0
-
-
-    
-
-    // Remove current dot
-    document.getElementsByClassName('current_dot')[0].classList.remove('current_dot')
-
-    // Changement d'image
-    changeImg(imgIndex,1,1)
-    // Set next dot
-    document.getElementById('dot_'+imgIndex).classList.add('current_dot')
-    }
-
-    else{
-      (imgIndex===0)? imgIndex=datas.length-1 : imgIndex--
-    
-      // Remove current dot
-    document.getElementsByClassName('current_dot')[0].classList.remove('current_dot')
-
-    // Set next dot
-    document.getElementById('dot_'+imgIndex).classList.add('current_dot')
-    // Changement d'image
-    changeImg(imgIndex,0,1)
-    }
-
-
-    
-    
-
-    interval=setInterval(() => {
-      moveImg()
-    }, delai);
-  }
-
-  let timeOut
-  function changeImg(imgIndex,direction=1,v=0) {
-    // console.log('Changing image annimation');
-
-    clearTimeout(timeOut)
-    let currentView = document.getElementsByClassName('currentImgView')[0]
-
-    const navBtn=document.getElementsByClassName('img_nav')
-    navBtn[0].style.display='none'
-    navBtn[1].style.display='none'
-
-    switch (v) {
-      case 1:{
-
-        if (direction==1) {
-
-          // passage au suivant
-          currentView.style.transform='translateX(-100%)'
-          // document.getElementById('nextImgView').style.display='flex'
-          
-        } else {
-          // passage au precedent
-          // document.getElementById('currentImgView').style.transform='translateX(100%)'
-          currentView.style.transform='translateX(100%)'
-        }
-        
-        timeOut=setTimeout(() => {
-          currentView.style.display='none'
-          document.getElementById('current').style.backgroundImage = `url(./images/projects/${datas[imgIndex]})`;
-          timeOut=setTimeout(() => {
-            currentView.style.transform='translateX(0)'
-            currentView.style.display='flex'
-            timeOut=setTimeout(() => {
-              navBtn[0].style.display='flex'
-              navBtn[1].style.display='flex'
-            }, 1400);
-            
-          }, 400);
-        }, 900);
-        // document.getElementById('currentImgView').style.animation='moveLeft'
-      }
-        
-        break;
-    
-      default:
-        {
-          document.getElementById('current').style.backgroundImage = `url(./images/projects/${datas[imgIndex]})`;
-          break;
-        }
-        
-    }
-    
-  }
+  document.getElementById('prevImg').addEventListener('click', () => {
+    clearInterval(interval);
+    moveImg(-1);
+  });
 }
+
+btnGallery.addEventListener('click', (e) => {
+  e.preventDefault();
+  // alert()
+  showGallery();
+});
