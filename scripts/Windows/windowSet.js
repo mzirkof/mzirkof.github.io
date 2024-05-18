@@ -78,7 +78,7 @@ function showWindow(windowContainer, name = 'Modal Window', contain = '', icon =
     bg.classList.remove('blured_main');
     windowContainer.className = 'pop_down';
     popContainer.style.display = 'none';
-    imgIndex = 0;
+    // imgIndex = 0;
 
     setTimeout(() => {
       removeChildren(parentId);
