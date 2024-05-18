@@ -1,6 +1,10 @@
 // The body Tag Element of the web Page
 // const body = document.getElementsByTagName('body')[0];
 
+// import playBalls from './ProjectsDone/Site B/js/bulles.js';
+// import playNeons from './ProjectsDone/Site B/js/neons.js';
+// import { playBalls } from './ProjectsDone/Site B/js/bulles.js';
+
 // Root Folder of The windows Code
 const rootLocation = './scripts/Windows/';
 const parentId = 'windows';
@@ -260,8 +264,11 @@ const siteB = `
 
 
 `;
+
 windowBtn.addEventListener('click', () => {
   setLocalWindow('Project name', siteB);
+  // playBalls();
+  // playNeons();
 });
 
 /**
