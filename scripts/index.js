@@ -26,7 +26,6 @@ document.querySelectorAll('.close').forEach((k) => {
 // ============================================================================================
 // Main page : creating dynamically the projects section
 
-
 const works = [
   {
     name: 'Full-Stack Programmer Profile & Works',
@@ -49,34 +48,54 @@ const works = [
     sourceLink: '',
     linkText: 'See Project',
   },
-  
+
   {
     name: 'Responsive PortFolio ',
     description: `<h2>Responsive PortFolio</h2>Web Application that Present Celestin SOUOP's Developper Profile. This PorFolio is Build Applying Mobile First Philosophie : which makes it a completely Multiscreams responsive app.
     Using Html, Javascipt and CSS. Features like Modal Popup, Mobile and Desktop menu , Cards Building with Both grid & FlexBox display are used .`,
     featured: '',
     image: '/projects/portfolio.png',
-    technologies: ['HTML','JSON', 'CSS', 'Javascript'],
+    technologies: ['HTML', 'JSON', 'CSS', 'Javascript'],
     liveLink: '',
     sourceLink: '',
     linkText: 'See Project',
   },
   {
     name: 'School Management System ',
-    description: `<h2>School Management System</h2> Web Application dedicated to manage Secondary Schools. Organising Students and Teacher, notes and Report Cards`,
+    description: '<h2>School Management System</h2> Web Application dedicated to manage Secondary Schools. Organising Students and Teacher, notes and Report Cards',
     featured: 'Add Students,Add notes, Add Topics, Generate PDF cards , Manage old school years',
     image: '/projects/f.jpg',
-    technologies: ['PHP','J Query','TCPDF', 'CSS', 'Javascript', 'HTML'],
+    technologies: ['PHP', 'J Query', 'TCPDF', 'CSS', 'Javascript', 'HTML'],
     liveLink: '',
     sourceLink: '',
     linkText: 'See Project',
   },
   {
     name: 'One Url Project ',
-    description: `<h2>One Url Project</h2>Web Application dedicated to tinify or shorten URL `,
+    description: '<h2>One Url Project</h2>Web Application dedicated to tinify or shorten URL ',
     featured: 'Add User with different account types, Save Url and give shorten correspondance, Rediferent a shorten code to the related URL',
     image: '/projects/x.png',
-    technologies: ['Python','Axios','React JS','Redux','Rest Framework API','Django', 'TailWind CSS', 'Javascript', 'PostGreSQL','HTML'],
+    technologies: ['Python', 'Axios', 'React JS', 'Redux', 'Rest Framework API', 'Django', 'TailWind CSS', 'Javascript', 'PostGreSQL', 'HTML'],
+    liveLink: '',
+    sourceLink: '',
+    linkText: 'See Project',
+  },
+  {
+    name: 'Site B Project ',
+    description: '<h2>Site B Project</h2>A One page Informative Web Application ',
+    featured: 'Used Figma for designing the application, Managing CSS and Javascript Annimations, Disposing component in web Apllication with CSS flexBox, Dealing with sizes ,Shapes and shadows',
+    image: '/projects/SiteBCapture.png',
+    technologies: ['Figma', 'CSS', 'Javascript', 'HTML'],
+    liveLink: '',
+    sourceLink: '',
+    linkText: 'See Project',
+  },
+  {
+    name: 'Online TicTacToe Game ',
+    description: '<h2>Iic Tac Toe Game </h2>Web Application that Implement the logic and GamePlay of the legendary Morpion known as TicTacToe . Two players cans have fun online ',
+    featured: 'Control the matrix of the game map, Check if there is a winner, Let players play their turn',
+    image: '/projects/TttCapture.png',
+    technologies: ['CSS', 'Javascript', 'HTML'],
     liveLink: '',
     sourceLink: '',
     linkText: 'See Project',
@@ -119,8 +138,8 @@ workSection.innerHTML = `${workContain}`;
 // ============================================================================================
 // Actions on btn see details popup
 
-function openPopUp(work=false) {
-  let pop=``;
+function openPopUp(work = false) {
+  let pop = '';
 
   pop = `<section class="container">
                     <div class="pop_head">
@@ -134,7 +153,7 @@ function openPopUp(work=false) {
 
                     <div class="grid-item pop_title">
                       <span class="title">
-                       ${work.name}
+                      ${work.name}
                       </span>
                       <section class="d_links" hidden >
                         <div class="links action_2 centered">
@@ -151,20 +170,22 @@ function openPopUp(work=false) {
                         </div>
                       </section>
                       <ul class="tag_ctn">`;
-                      work.technologies.map((value)=>{
-                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
-                      })
-                      
-                      pop+=`
+  work.technologies.map((value) => {
+    pop += `<li class="tag"><span class="tag_txt">${value}</span></li>`;
+    return 1;
+  });
+
+  pop += `
                       </ul>
                     </div>
 
                     <div class="grid-item d_pop_tag_ctn">
-                      <ul class="tag_ctn">`
-                      work.technologies.map(value=>{
-                        pop+=`<li class="tag"><span class="tag_txt">${value}</span></li>`
-                      })
-                      pop+=`
+                      <ul class="tag_ctn">`;
+  work.technologies.map((value) => {
+    pop += `<li class="tag"><span class="tag_txt">${value}</span></li>`;
+    return 1;
+  });
+  pop += `
                         
                       </ul>
                     </div>
@@ -190,11 +211,13 @@ function openPopUp(work=false) {
 
                 </section>`;
 
-
   popUpWindows.innerHTML = `${pop}`;
   popUpWindows.className = 'pop_up';
 
   main.classList.add('blured_main');
+  // Removing scrolling possibility
+  const body = document.getElementsByTagName('body')[0];
+  body.classList.add('no_scroll');
 
   const popContainer = document.querySelector('.container');
   const btnClosePop = document.getElementById('close_pop');
@@ -202,14 +225,15 @@ function openPopUp(work=false) {
     main.classList.remove('blured_main');
     popUpWindows.className = 'pop_down';
     popContainer.style.display = 'none';
+    body.classList.remove('no_scroll');
   });
 }
 
 for (let i = 0; i < btnPopUp.length; i += 1) {
   const element = btnPopUp[i];
-  let index =  btnPopUp[i].getAttribute("id");
-  element.addEventListener('click', () => { 
-    openPopUp(works[index]); 
+  const index = btnPopUp[i].getAttribute('id');
+  element.addEventListener('click', () => {
+    openPopUp(works[index]);
   });
 }
 

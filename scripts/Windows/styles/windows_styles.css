@@ -1,4 +1,6 @@
 
+/* *{background: red;} */
+
 /* Mobile Version of screen smaller than considered ( < 375px) */
 @media (max-width: 375px) {
   body {
@@ -8,7 +10,7 @@
 
 /* Mobile version for phone with considered screen size minimum 375px
 @media (min-width: 375px) {
-  } */
+} */
 
 /* ========================================================================================================================= */
 
@@ -19,8 +21,6 @@
   #galleryContainer .gallery_ctn {
     background: rgba(100, 100, 100, 0.3);
     width: 90%;
-
-    /* width: 60%; */
     height: 90%;
     grid-template-rows: 8% 90%;
   }
@@ -35,25 +35,6 @@
     font-size: 1.7em;
     font-weight: bold;
     text-align: center;
-  }
-
-  .close_pop {
-    width: 100%;
-    height: 100%;
-  }
-
-  .container .pop_head .menu {
-    background: red;
-    border: 2px solid #fff;
-    border-radius: 50%;
-    opacity: 0.8;
-    z-index: 1;
-    transition: 1ms ease-in-out;
-
-    img {
-      width: 100%;
-      height: 100%;
-    }
   }
 
   #galleryContainer .image_view {
@@ -140,7 +121,6 @@
     }
 
     80% {
-      /* transform: translateX(30px); */
       transform: scale(1.1);
     }
 
@@ -192,6 +172,74 @@
   #galleryContainer .image_view .track .current_dot {
     background: #fff;
     box-shadow: 2px 2px 15px #fff;
+  }
+
+  .pop_up {
+    display: flex;
+    position: fixed;
+    justify-content: center;
+    align-items: flex-start;
+    z-index: 11;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+  }
+
+  #window_container,
+  .pop_up .container {
+    z-index: 10;
+    width: 80%;
+    width: 90%;
+    margin: 0;
+    height: 96%;
+    top: 2%;
+    background: #fff;
+    border: 1px solid #48484a;
+    border-radius: 8px;
+    animation: scaleIn 0.5s;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .w_head {
+    width: 100%;
+    height: 40px;
+
+    .ctn_head {
+      justify-content: space-between;
+      padding: 0 10px 0 40px;
+    }
+
+    .w_menu {
+      background: transparent;
+      border-radius: 50%;
+      width: 30px;
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border: 2px solid red;
+    }
+
+    .w_menu:hover {
+      background: red;
+    }
+  }
+
+  #divider {
+    height: 5px;
+    width: 100%;
+    background: #48484a;
+  }
+
+  .pop_up .w_content {
+    border-color: #48484a;
+    overflow-x: hidden;
+    overflow-y: auto;
   }
 }
 
