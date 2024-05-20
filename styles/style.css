@@ -39,6 +39,11 @@
     display: flex;
     overflow: hidden;
 
+    /* #mainPage {
+      background: hsla(27, 93%, 94%, 0.5);
+      background: red;
+    } */
+
     #bottom_menu {
       display: none;
     }
@@ -1125,6 +1130,39 @@
   .decor:hover {
     transform: scale(1.1);
   }
+
+  .sideSocialMenu {
+    width: 100%;
+    height: 40px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+    .social {
+      gap: 5px;
+
+      .social_link {
+        /* border: 1px solid green; */
+        height: 100%;
+        width: 40px;
+        transition: 0.8s ease-in-out;
+
+        .icon_link {
+          width: 80%;
+          height: 80%;
+          background-repeat: no-repeat;
+          background-size: contain;
+        }
+      }
+
+      .social_link:hover {
+        cursor: pointer;
+        border-top-left-radius: 6px;
+        border-top-right-radius: 6px;
+        height: calc(100% + 20px);
+      }
+    }
+  }
 }
 
 /* ========================================================================================================================= */
@@ -1665,43 +1703,55 @@
   }
 
   #bottom_menu {
-    width: 86%;
-    margin-left: 7%;
-    height: 50px;
+    width: auto;
     height: auto;
     position: fixed;
     bottom: 10px;
+    left: 1%;
     padding: 5px 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+    gap: 30px;
     z-index: 5;
 
     .btMenuCtn {
-      gap: 20px;
+      gap: 15px;
+      flex-direction: column;
+      align-items: flex-start;
     }
 
     .project {
       width: auto;
       gap: 10px;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       justify-content: center;
       align-items: center;
 
       .project_name {
         color: gray;
         color: #110338;
+        z-index: 1;
+        display: none;
+        animation: slideRight 1s ease-in-out;
       }
+
+      /* .project:hover > .project {
+        background: red;
+      } */
     }
 
     .project_circle {
       width: 40px;
       height: 40px;
       border: 1px solid rgba(100, 200, 250, 0.8);
+      background: rgba(193, 199, 208, 0.4);
       background-size: contain;
       border-radius: 50%;
       transition: 0.2s ease-in-out;
+      z-index: 5;
     }
 
     .project_circle:hover {
@@ -1710,10 +1760,64 @@
       animation: topAndGrow 1s  0 1 direction fill-mode;
     }
 
+    #p0 {
+      background-image: url('./../images/Snapshoot\ Portfolio.svg');
+    }
+
+    #p1 {
+      background-image: url('./../images/Icons/ttt.png');
+    }
+
     @keyframes topAndGrow {
       50% {
         animation: translate(100px);
       }
     }
+  }
+
+  .sideSocialMenu {
+    width: 50px;
+    height: 100%;
+    border-radius: 0;
+    position: fixed;
+    transition: 1s ease-in-out;
+    left: calc(100% - 40px);
+    bottom: 0;
+
+    .social {
+      gap: 2px;
+      flex-direction: column;
+
+      .social_link {
+        /* background: green; */
+        height: 40px;
+        width: 100%;
+        transition: 0.6s ease-in-out;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+      }
+
+      .social_link:hover {
+        cursor: pointer;
+        border-top-left-radius: 6px;
+        border-bottom-left-radius: 6px;
+        height: 40px;
+        width: calc(100% + 20px);
+      }
+    }
+  }
+
+  .sideSocialMenu:hover {
+    left: calc(100% - 50px);
+  }
+}
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(-35%);
+  }
+
+  100% {
+    transform: translateX(0);
   }
 }
