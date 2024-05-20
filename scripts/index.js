@@ -322,7 +322,7 @@ const socialLinks = [
   },
   {
     title: 'LinkedIn',
-    url: 'https://linkedin/celestin_souop',
+    url: 'https://www.linkedin.com/in/celestin-souop-58341a109/',
     icon: './../images/Icons/linkedin-icon-1024x1024-z5dvl47c.png',
     bgColor: defaultColor,
   },
