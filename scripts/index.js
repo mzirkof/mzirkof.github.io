@@ -308,3 +308,51 @@ contactForm.user_msg.addEventListener('change', () => {
   userDatas.userMsg = contactForm.user_msg.value;
   localSave();
 });
+
+// Side Menu Social Links
+// const defaultColor = '#666';
+// const defaultColor = 'rgba(100,100,100, 0.5)';
+const defaultColor = '';
+const socialLinks = [
+  {
+    title: 'Facebook',
+    url: 'https://facebook.com/SOSmzk',
+    icon: './../images/Icons/Facebook-Logo.png',
+    bgColor: defaultColor,
+  },
+  {
+    title: 'LinkedIn',
+    url: 'https://linkedin/celestin_souop',
+    icon: './../images/Icons/linkedin-icon-1024x1024-z5dvl47c.png',
+    bgColor: defaultColor,
+  },
+  {
+    title: 'Twitter',
+    url: 'https://twitter.com/SOSmzk',
+    icon: './../images/Icons/Logo_of_Twitter.svg.png',
+    bgColor: defaultColor,
+  },
+  {
+    title: 'YouTube',
+    url: 'https://youtube.com/SOSmzk',
+    icon: './../images/Icons/YouTube_full-color_icon_(2017).png',
+    bgColor: defaultColor,
+  },
+  {
+    title: 'Github',
+    url: 'https://github.com/mzirkof',
+    icon: './../images/Icons/github.svg',
+    bgColor: defaultColor,
+  },
+];
+
+let links = '';
+socialLinks.forEach((element) => {
+  links += `
+        <div class="social_link section_container" style="background: ${element.bgColor};">
+          <a class="section_container icon_link" style="background-image: url('${element.icon}');" target=blank href="${element.url}"></a>
+        </div>
+  `;
+});
+
+document.getElementById('socialLinks').innerHTML = links;
