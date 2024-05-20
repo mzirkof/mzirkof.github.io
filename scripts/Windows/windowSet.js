@@ -1,10 +1,6 @@
 // The body Tag Element of the web Page
 // const body = document.getElementsByTagName('body')[0];
 
-// import playBalls from './ProjectsDone/Site B/js/bulles.js';
-// import playNeons from './ProjectsDone/Site B/js/neons.js';
-// import { playBalls } from './ProjectsDone/Site B/js/bulles.js';
-
 // Root Folder of The windows Code
 const rootLocation = './scripts/Windows/';
 const parentId = 'windows';
@@ -115,7 +111,8 @@ function setLocalWindow(name, content) {
 }
 
 const windowBtn = document.getElementById('p0');
-windowBtn.style.backgroundImage = "url('./../images/Snapshoot Portfolio.svg')";
+// windowBtn.style.backgroundImage = "url('./../images/Snapshoot Portfolio.svg')";
+// windowBtn.style.backgroundImage = "url('./../../images/Snapshoot Portfolio.svg')";
 
 const root = `${rootLocation}ProjectsDone/SiteB/`;
 const cssFiles = `<link rel="stylesheet" href="${root}css/index.css">`;
@@ -267,8 +264,6 @@ const siteB = `
 
 windowBtn.addEventListener('click', () => {
   setLocalWindow('Project name', siteB);
-  // playBalls();
-  // playNeons();
 });
 
 /**
@@ -276,7 +271,7 @@ windowBtn.addEventListener('click', () => {
  */
 const windowBtn1 = document.getElementById('p1');
 // windowBtn1.style.backgroundImage="url('./../images/Snapshoot\ Portfolio.svg')"
-windowBtn1.style.backgroundImage = "url('./../images/Icons/ttt.png')";
+// windowBtn1.style.backgroundImage = "url('./../images/Icons/ttt.png')";
 
 const root2 = `${rootLocation}ProjectsDone/TicTacToe/`;
 const cssFiles2 = `<link rel="stylesheet" href="${root2}css/tttGame.css">`;
@@ -296,4 +291,18 @@ const tttGame = `
 // const ttt = `<div class="section_container" id="mainTttGame"></div>`
 windowBtn1.addEventListener('click', () => {
   setLocalWindow('TicTacToe Game', tttGame);
+});
+
+const windowButtons = [...document.getElementsByClassName('project_circle')];
+windowButtons.forEach((element) => {
+  // console.log(element);
+  element.addEventListener('mouseenter', () => {
+    const id = element.getAttribute('id').split('p')[1];
+    document.getElementById(`pn${id}`).style.display = 'flex';
+  });
+
+  element.addEventListener('mouseleave', () => {
+    const id = element.getAttribute('id').split('p')[1];
+    document.getElementById(`pn${id}`).style.display = 'none';
+  });
 });
