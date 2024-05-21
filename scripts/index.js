@@ -312,7 +312,7 @@ contactForm.user_msg.addEventListener('change', () => {
 // Side Menu Social Links
 // const defaultColor = '#666';
 // const defaultColor = 'rgba(100,100,100, 0.5)';
-const defaultColor = '';
+const defaultColor = 'rgba(10,10,10, 0.2)';
 const socialLinks = [
   {
     title: 'Facebook',
