@@ -312,7 +312,7 @@ contactForm.user_msg.addEventListener('change', () => {
 // Side Menu Social Links
 // const defaultColor = '#666';
 // const defaultColor = 'rgba(100,100,100, 0.5)';
-const defaultColor = '';
+const defaultColor = 'rgba(10,10,10, 0.2)';
 const socialLinks = [
   {
     title: 'Facebook',
@@ -322,7 +322,7 @@ const socialLinks = [
   },
   {
     title: 'LinkedIn',
-    url: 'https://linkedin/celestin_souop',
+    url: 'https://www.linkedin.com/in/celestin-souop-58341a109/',
     icon: './../images/Icons/linkedin-icon-1024x1024-z5dvl47c.png',
     bgColor: defaultColor,
   },
