@@ -19,15 +19,20 @@
   <!-- TicTacToe style css file -->
   <link rel="stylesheet" href="./scripts/Windows/ProjectsDone/TicTacToe/css/tttGame.css">
   <link rel="stylesheet" href="./styles/animated_text.css">
+
+  <!-- Animated Loader style -->
+  <link rel="stylesheet" href="./scripts/loader/loaderV2.css">
   
 </head>
 <body>
   <div class="main" id="mainPage">
       <!-- Toollbar ( Icon and Menu )  -->
       <header class="toolbar" id="toolbar">
+        <!-- Desktop Logo -->
         <a href="./index.html" class="logo desktop">
           👩‍💻 MZIRKOF 👋
         </a>
+        <!-- Mobile logo -->
         <a href="./index.html" class="logo mobile">
           👩‍💻 MZK 👋
         </a>
@@ -58,6 +63,8 @@
         <li><a class="nav_item close" href="#contact">Contact</a></li>
       </ul>
     </nav>
+
+    <div class="loader" id="loader"></div>
   </header>
 
       <!-- Headline section -->
@@ -65,7 +72,7 @@
         <h1>
             Hey there. &nbsp; I’m Mzirkof.
           <p>
-              I’m a <span class="text" id="animText">
+              I’m <span class="text" id="animText">
                 software developer
               </span>
           </p>
@@ -270,6 +277,7 @@
 <script src="scripts/Windows/ProjectsDone/TicTacToe.js"></script>
 <script src="scripts/Windows/ProjectsDone/TicTacToe/js/tictactoeGame.js"></script>
 
-
+<!-- animated loader version 2 -->
+<script src="./scripts/loader/loadingV2.js"></script>
 </body>
 </html>
