@@ -89,8 +89,11 @@
     position: fixed;
     top: 0;
     z-index: 11;
-    height: 90vh;
-    width: 100vw;
+
+    /* height: 90%; */
+    padding: 10px;
+    height: auto;
+    width: 100%;
     background: white;
     border-radius: 0 0 30px 30px;
     align-items: center;
@@ -98,6 +101,13 @@
     flex-direction: column;
     justify-content: flex-start;
     box-shadow: 0 48px 48px rgba(37, 47, 137, 0.08);
+
+    .navigation {
+      width: 90%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
 
   @keyframes turn_go {
@@ -1138,7 +1148,7 @@
     z-index: 15;
     position: fixed;
     left: 0;
-    bottom: 0;
+    bottom: 15px;
 
     .social {
       gap: 6px;
