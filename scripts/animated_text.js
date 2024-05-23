@@ -1,11 +1,11 @@
 let MyText = 'a Smart Programmer';
 const words = [
-  'software developer 👩‍💻',
-  'Smart Programmer 🐱‍💻',
-  'Graphist',
-  'Mentor 👨‍🏫',
-  'Cameroonian 🌍',
-  'a Teacher 🏫',
+  ' A software developer 👩‍💻',
+  'A Smart Programmer 🐱‍💻',
+  'A Graphist',
+  'A Mentor 👨‍🏫',
+  'A Cameroonian 🌍',
+  'A Teacher 🏫',
 ];
 let write = true;
 let index = 0;
