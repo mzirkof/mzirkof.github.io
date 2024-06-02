@@ -1,9 +1,3 @@
-// console.log(cubes)
-
-// cubes.forEach(element => {
-//     console.log(element)
-// });
-
 const mySpeed = 500;
 let loaderCounter = 10;
 let loaderCompleted = true;
@@ -31,7 +25,7 @@ function setLoaderV2(loader) {
               </div>
       </div>
       <div class="brand">
-        Powered By <span class="name">© Mzirkof</span> <span class="last_part"> All Rights Reserved <span>
+        Portfolio V1.10 By <span class="name"><sup>©</sup>Mzirkof</span> <span class="last_part"> All Rights Reserved <span>
       </div>
     </div>`;
 
