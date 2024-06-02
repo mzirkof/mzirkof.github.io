@@ -25,13 +25,13 @@ function showGallery() {
   let pop = '';
 
   pop = `<section class="container gallery_ctn">
-                    <div class="pop_head">
+                    <div class="g_pop_head">
+                      <div class="grid-item pop_title">
+                          The Projects Images Gallery
+                      </div>
                       <nav class="menu">
                         <img src="images/Normal Button/Tertiary/Enabled.svg" class="close_pop" alt="" id="close_gallery">
                       </nav>
-                    </div>
-                    <div class="grid-item pop_title">
-                        The Projects Images Gallery
                     </div>
                     <div class="grid-item image_view">
                         <section class="img_nav prev" id="prevImg"><</section>
