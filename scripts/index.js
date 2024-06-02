@@ -105,8 +105,10 @@ let workContain = '';
 for (let index = 0; index < works.length; index += 1) {
   const element = works[index];
   workContain += `<section class="grid_1-item">
-                    <section class="illustration_image" style="background-image:url(./images/${element.image});">
-                      
+                    <div class="work_container">
+                    <section class="illustration_ctn" >
+                      <div class="illustration_image" style="width:100%;height:100%;background-image:url(./images/${element.image});">
+                      </div>
                     </section>
                     <section class="txt">
                       <h3 class="project_title">${element.name}</h3>
@@ -123,6 +125,7 @@ for (let index = 0; index < works.length; index += 1) {
                       </section>
 
                     </section>
+                    </div>
                   </section>`;
 }
 workContain = `<section class="title">
