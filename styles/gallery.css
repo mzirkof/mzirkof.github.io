@@ -18,20 +18,52 @@
 @media (min-width: 768px) {
   #galleryContainer .gallery_ctn {
     background: rgba(100, 100, 100, 0.3);
+    background: #172b4d;
     width: 90%;
+    padding: 5px 10px;
 
     /* width: 60%; */
     height: 90%;
     grid-template-rows: 8% 90%;
+    box-shadow: 1px 1px 25px 1px #fcfcfc;
   }
 
-  #galleryContainer .pop_head {
+  #galleryContainer .g_pop_head {
     margin-top: 1%;
+    width: 100%;
+    display: flex;
+    border-bottom: 2px solid #36b37e;
+
+    /* justify-content: center; */
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+
+    .menu {
+      background: red;
+      width: 28px;
+      height: 28px;
+      border: 2px solid #fff;
+      border-radius: 50%;
+      opacity: 0.8;
+      z-index: 1;
+      transition: 1ms ease-in-out;
+
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .menu:hover {
+      opacity: 1;
+    }
   }
 
   #galleryContainer .pop_title {
     color: #36b37e;
     color: #172b4d;
+    color: #fcfcfc;
     font-size: 1.7em;
     font-weight: bold;
     text-align: center;
@@ -42,7 +74,7 @@
     height: 100%;
   }
 
-  .container .pop_head .menu {
+  /* .container .pop_head .menu {
     background: red;
     border: 2px solid #fff;
     border-radius: 50%;
@@ -54,7 +86,7 @@
       width: 100%;
       height: 100%;
     }
-  }
+  } */
 
   #galleryContainer .image_view {
     font-size: 1.5rem;
@@ -105,10 +137,13 @@
   #galleryContainer .image_view .view .img_view {
     width: 30%;
     width: 100%;
-    border-radius: 5px;
     border: 35px solid #172b4d;
+    border: 50px solid #36b37e;
+    border: 60px solid transparent;
     border-left: none;
     border-right: none;
+    border-top: none;
+    border-radius: 0;
     background-repeat: no-repeat;
     background-size: cover;
     height: 100%;
@@ -173,7 +208,7 @@
     position: absolute;
     bottom: 25px;
     display: flex;
-    gap: 4px;
+    gap: 8px;
     justify-content: center;
     align-items: center;
     z-index: 2;
@@ -186,12 +221,14 @@
     border-radius: 50%;
     background: transparent;
     border: 0.15rem solid #fff;
+    border: 0.15rem solid #36b37e;
     transition: 1s ease-in-out;
   }
 
   #galleryContainer .image_view .track .current_dot {
     background: #fff;
-    box-shadow: 2px 2px 15px #fff;
+    background: #36b37e;
+    box-shadow: 0 0 3px 3px #fcfcfc;
   }
 }
 
