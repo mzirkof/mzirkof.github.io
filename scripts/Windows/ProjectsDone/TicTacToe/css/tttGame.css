@@ -82,6 +82,8 @@
         .j1 {
           /* background: rebeccapurple; */
           background: transparent;
+          border: 1px solid #111;
+          box-shadow: 1px 1px 5px 5px #666;
           background-position: center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -90,6 +92,8 @@
 
         .j2 {
           /* background: green; */
+          border: 1px solid #111;
+          box-shadow: 1px 1px 5px 5px rebeccapurple;
           background: transparent;
           background-position: center;
           background-size: cover;
