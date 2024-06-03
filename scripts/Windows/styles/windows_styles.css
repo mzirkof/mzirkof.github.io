@@ -195,8 +195,9 @@
     margin: 0;
     height: 96%;
     top: 2%;
-    background: #fff;
+    background: #fcfcfc;
     border: 1px solid #48484a;
+    border: 2px solid #172b4d;
     border-radius: 8px;
     animation: scaleIn 0.5s;
     display: flex;
@@ -236,10 +237,12 @@
     background: #48484a;
   }
 
-  .pop_up .w_content {
+  .w_content {
     border-color: #48484a;
     overflow-x: hidden;
     overflow-y: auto;
+    height: 200px;
+    flex-grow: 1;
   }
 }
 
