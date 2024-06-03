@@ -421,7 +421,7 @@ function setEventListener() {
 function drawCanvas() {
   // console.log('Drawing canvas')
   const content = `
-        <div class="container mainGameCtn">
+        <div class="mainGameCtn">
         <div class="game">
             <div class="place" id="p1"></div>
             <div class="place" id="p2"></div>
