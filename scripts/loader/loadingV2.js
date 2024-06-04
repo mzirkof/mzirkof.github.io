@@ -25,7 +25,7 @@ function setLoaderV2(loader) {
               </div>
       </div>
       <div class="brand">
-        Portfolio V1.10 By <span class="name"><sup>©</sup>Mzirkof</span> <span class="last_part"> All Rights Reserved <span>
+        Portfolio V1.2.0 By <span class="name"><sup>©</sup>Mzirkof</span> <span class="last_part"> All Rights Reserved <span>
       </div>
     </div>`;
 
