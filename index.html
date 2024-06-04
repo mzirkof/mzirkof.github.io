@@ -26,6 +26,7 @@
 </head>
 <body>
   <div class="main" id="mainPage">
+
       <!-- Toollbar ( Icon and Menu )  -->
       <header class="toolbar" id="toolbar">
         <!-- Desktop Logo -->
@@ -48,28 +49,30 @@
           </ul>
         </nav>
       </header>
+      <!-- Mobile menu -->
+      <header class="mobile_menu" id="mobile_menu">
+        <div class="m_head">
+          <nav class="menu">
+            <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_menu_icon">
+          </nav>
+        </div>
+        <div class="photo">
+          <div class="ctn mzirkof">
 
-  <header class="mobile_menu" id="mobile_menu">
-    <div class="m_head">
-      <nav class="menu">
-        <img src="images/Normal Button/Tertiary/Enabled.svg" alt="" id="close_menu_icon">
-      </nav>
-    </div>
-    <div class="photo">
-      <div class="ctn mzirkof">
+          </div>
+        </div>
+        <nav class="navigation">
+          <ul class="nav_ctn">
+            <li><a class="nav_item close" href="#r_works">PortFolio</a></li>
+            <li><a class="nav_item close" href="#about_me">About</a></li>
+            <li><a class="nav_item close" href="#contact">Contact</a></li>
+          </ul>
+        </nav>
 
-      </div>
-    </div>
-    <nav class="navigation">
-      <ul class="nav_ctn">
-        <li><a class="nav_item close" href="#r_works">PortFolio</a></li>
-        <li><a class="nav_item close" href="#about_me">About</a></li>
-        <li><a class="nav_item close" href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+        <div class="loader" id="loader"></div>
+      </header>
 
-    <div class="loader" id="loader"></div>
-  </header>
+
 
       <!-- Headline section -->
       <section class="headline">
@@ -99,9 +102,12 @@
         </section>
       </section>
 
-      <section class="r_works" id="test">
 
+      <!-- Recent works section -->
+      <section class="r_works" id="r_works">
       </section>
+
+
 
       <!-- About Me Section -->
       <section class="about_me" id="about_me">
@@ -211,9 +217,6 @@
       </section>
 
       <!-- Footer of the page -->
-      <section class="decor img_bg1"></section>
-      <section class="decor img_bg2"></section>
-      <section class="decor img_bg3"></section>
       <footer>
         <span>
           souop_007@yahoo.fr
@@ -227,7 +230,13 @@
         </ul>
         <hr>
       </footer>
-  
+  </div>
+
+  <!-- Decoration of the page -->
+      <section class="decor img_bg1"></section>
+      <section class="decor img_bg2"></section>
+      <section class="decor img_bg3"></section>
+    <!-- Bottom Floating menu -->
     <section id="bottom_menu">
       <div class="section_container btMenuCtn">
         <div class="project">
@@ -256,7 +265,8 @@
       <div class="section_container social" id="socialLinks">
       </div>
     </section>
-  </div>
+
+    
   <section id="pop_up" hidden></section>
   <section id="galleryContainer" hidden></section>
   <section id="windows"></section>
