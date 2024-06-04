@@ -90,14 +90,7 @@ function showWindow(windowContainer, name = 'Modal Window', contain = '', icon =
 }
 
 function setLocalWindow(name, content) {
-  // name=name.toLowerCase(name)
-
-  // Adding the css file to DOM tree
   addNodeChild(parentId, cssFile);
-  // if(!cssSet) {
-  //     addNodeChild(parentId,cssFile)
-  //     cssSet=true
-  // }
 
   let n = '';
   for (let index = 0; index < name.length; index += 1) {
@@ -279,15 +272,11 @@ addNodeChild(parentId, cssFiles2);
 const tttGame = `
 
 <link rel="stylesheet" href="./css/tttGame.css">
-</head>
-<body>
-    Just Have Fun Online while visiting the Web Application
+    <section class="ttt_title " >Just Have Fun Online while visiting the Web Application</section>
 
     <div id="mainTttGame">
-      <div class="container mainGameCtn">
-      </div>
     </div>
-</body>`;
+`;
 // const ttt = `<div class="section_container" id="mainTttGame"></div>`
 windowBtn1.addEventListener('click', () => {
   setLocalWindow('TicTacToe Game', tttGame);
