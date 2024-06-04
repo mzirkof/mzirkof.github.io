@@ -333,7 +333,7 @@ const socialLinks = [
   },
   {
     title: 'Twitter',
-    url: 'https://twitter.com/SOSmzk',
+    url: 'https://x.com/SOSmzk',
     // icon: './../images/Icons/Logo_of_Twitter.svg.png',
     icon: './../images/Icons/social logos/twitter.svg',
     bgColor: defaultColor,
