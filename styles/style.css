@@ -1998,18 +1998,22 @@ body {
   .sideSocialMenu {
     width: 50px;
     height: 100%;
+    height: fit-content;
     border-radius: 0;
     position: fixed;
-    justify-content: flex-start;
-    padding-top: 50px;
     transition: 1s ease-in-out;
     left: calc(100% - 50px);
     bottom: 0;
+    bottom: calc((100% - 300px) / 2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .social {
-      gap: 1px;
+      gap: 0;
       flex-direction: column;
       transition: 1s ease-in-out;
+      height: fit-content;
 
       .social_link {
         /* background: green; */
@@ -2022,6 +2026,7 @@ body {
         .icon_link {
           width: 70%;
           height: 70%;
+          color: #111;
         }
       }
 
