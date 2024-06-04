@@ -315,7 +315,7 @@ contactForm.user_msg.addEventListener('change', () => {
 // Side Menu Social Links
 // const defaultColor = '#666';
 // const defaultColor = 'rgba(100,100,100, 0.5)';
-const defaultColor = 'rgba(10,10,10, 0.2)';
+const defaultColor = 'rgba(240,240,240, 0.9)';
 const socialLinks = [
   {
     title: 'Facebook',
