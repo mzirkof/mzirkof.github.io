@@ -40,150 +40,81 @@ const matrix = t;
  * (Is there a winner or is it a Draw Game Or the Game is steel going on ?)
  */
 function checkGame(matrix) {
-  function isSame(matrix, direction) {
-    /**  The logic here is to check tha matrix of the game on every possible winning direction
-         * @param - matrix : matrix of the Game
-         * @param - direction : the Game direction to check. Direction Values are :
-         *              1   for Horizontal (X-axis)
-         *              2   for Vertical (Y-axis)
-         *              3   for one diagonal line (x = -y)
-         *              4   for the other diagonal line (x = y)
-         * @returns - an Object result containing :
-         *              winned : which is a boolean telling if someone has won the game (true value)
-         *              winner : which give the val of the one who has won ( player1 or player2 )
-         *               Notice that when the winner is steel null it means that the values was 0.
-        */
+  // function isSame(matrix, direction) {
+  //   /**  The logic here is to check tha matrix of the game on every possible winning direction
+  //        * @param - matrix : matrix of the Game
+  //        * @param - direction : the Game direction to check. Direction Values are :
+  //        *              1   for Horizontal (X-axis)
+  //        *              2   for Vertical (Y-axis)
+  //        *              3   for one diagonal line (x = -y)
+  //        *              4   for the other diagonal line (x = y)
+  //        * @returns - an Object result containing :
+  //        *     winned : which is a boolean telling if someone has won the game (true value)
+  //        *     winner : which give the val of the one who has won ( player1 or player2 )
+  //        * Notice that when the winner is steel null it means that the values was 0.
+  //       */
 
-    const result = {
-      winned: false,
-      winner: null,
-    };
+  function isWining(player) {
+    let winner = false;
 
-    let a; let i; let j;
-    const size = matrix.length;
-    let flag = true;
-    switch (direction) {
-      case 1:
-      {
-        i = 0;
-        while (i < size) {
-          j = 0;
-          flag = true;
-          a = matrix[i][j];
-          while (j < size) {
-            if (matrix[i][j] !== a) {
-              // console.log(matrix[i])
-              flag = false;
-              break;
-            }
-            j += 1;
-          }
-          if (flag) {
-            // if flag is steel true it means that there is a Winner
-            result.winned = flag;
-            result.winner = a;
-            // console.log('Victoire en ligne '+i)
-            break;
-          } else {
-            i += 1;
-            j = 0;
-          }
-        }
-        break;
-      }
+    if (
+      (matrix[0][0] === player)
+      && (matrix[0][1] === player)
+      && (matrix[0][2] === player)
+    ) winner = true;
 
-      case 2: {
-        j = 0;
-        while (j < size) {
-          i = 0;
-          flag = true;
-          a = matrix[i][j];
-          while (i < size) {
-            if (matrix[i][j] !== a) {
-              flag = false;
-              break;
-            }
-            i += 1;
-          }
+    else if (
+      (matrix[0][0] === player)
+      && (matrix[1][0] === player)
+      && (matrix[2][0] === player)) winner = true;
 
-          if (flag) {
-            // if flag is steel true it means that there is a Winner
-            result.winned = flag;
-            result.winner = a;
-            // console.log('Victoire a la colonne : '+j)
-            break;
-          }
-          j += 1;
-        }
-        break;
-      }
+    else if (
+      (matrix[1][0] === player)
+      && (matrix[1][1] === player)
+      && (matrix[1][2] === player)) winner = true;
+    else if (
+      (matrix[0][1] === player)
+      && (matrix[1][1] === player)
+      && (matrix[2][1] === player)) winner = true;
 
-      case 3: {
-        i = 0;
-        flag = true;
-        a = matrix[i][i];
-        while (i < size) {
-          if (matrix[i][i] !== a) {
-            flag = false;
-            break;
-          }
-          i += 1;
-        }
+    else if (
+      (matrix[2][0] === player)
+      && (matrix[2][1] === player)
+      && (matrix[2][2] === player)) winner = true;
 
-        if (flag) {
-          // if flag is steel true it means that there is a Winner
-          result.winned = flag;
-          result.winner = a;
-          // console.log("Victoire a la diagonale d'equation  : Y = - X ")
-          break;
-        }
-        break;
-      }
+    else if (
+      (matrix[0][2] === player)
+      && (matrix[1][2] === player)
+      && (matrix[2][2] === player)) winner = true;
 
-      case 4: {
-        i = 0;
-        flag = true;
-        a = matrix[i][size - 1];
-        while (i < size) {
-          j = 0;
-          flag = true;
-          while (j < size) {
-            if ((i + j) === (size - 1)) {
-              if (matrix[i][j] !== a) {
-                flag = false;
-                break;
-              }
-            }
-            j += 1;
-          }
+    else if (
+      (matrix[0][0] === player)
+      && (matrix[1][1] === player)
+      && (matrix[2][2] === player)) winner = true;
 
-          i += 1;
-        }
-
-        if (flag) {
-          // if flag is steel true it means that there is a Winner
-          result.winned = flag;
-          result.winner = a;
-          // console.log("Victoire a la diagonale d'equation  : Y = X ")
-          break;
-        }
-        break;
-      }
-
-      default:
-        break;
-    }
-
-    if (a === 0) {
-      result.winned = false;
-      result.winner = null;
-    }
-
-    return result;
+    else if (
+      (matrix[0][2] === player)
+      && (matrix[1][1] === player)
+      && (matrix[2][0] === player)) winner = true;
+    return winner;
   }
-  const check = [];
-  for (let index = 0; index < 4; index += 1) {
-    check.push(isSame(matrix, index + 1));
+
+  let check;
+  if (isWining(playerOne)) {
+    check = {
+      winned: true,
+      winner: playerOne,
+    };
+  } else if (isWining(playerTwo)) {
+    check = {
+      winned: true,
+      winner: playerTwo,
+    };
+  } else {
+    check = {
+      winned: false,
+      winner: 0,
+    };
   }
 
   return check;
@@ -375,16 +306,7 @@ function setEventListener() {
           gameStarted = true;
         }
         playEvent(element);
-        // console.log('The Matrix now is : '+ matrix)
-
-        const result = checkGame(matrix);
-        for (let index = 0; index < result.length; index += 1) {
-          const element = result[index];
-          if (element.winned) {
-            gameResult = element;
-            break;
-          }
-        }
+        gameResult = checkGame(matrix);
 
         gameDecision(gameResult, roundNumber);
       }
