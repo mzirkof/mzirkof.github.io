@@ -256,7 +256,7 @@ const siteB = `
 `;
 
 windowBtn.addEventListener('click', () => {
-  setLocalWindow('Project name', siteB);
+  setLocalWindow('Site Web Vitrine', siteB);
 });
 
 /**
