@@ -1799,7 +1799,7 @@ body {
     height: 260px;
     position: absolute;
     float: right;
-    right: -16%;
+    right: -17%;
     top: -65px;
     background-image: url(../images/illustration-about\ me-1-desktop.png);
     background-size: contain;
@@ -1941,6 +1941,7 @@ body {
 
   .img_bg1 {
     top: -240px;
+    top: -450px;
     left: 0;
   }
 
@@ -2142,7 +2143,7 @@ body {
 
 @media (min-width: 1300px) {
   body {
-    background: red;
+    /* background: red; */
   }
 
   .main {
