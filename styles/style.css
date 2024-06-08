@@ -1162,7 +1162,7 @@ body {
     font-family: 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: normal;
     font-weight: 700;
-    font-size: 38px;
+    font-size: 30px;
     line-height: 50px;
     text-align: center;
     color: #172b4d;
@@ -1210,7 +1210,7 @@ body {
   }
 
   .submit .btn {
-    width: 40%;
+    width: 60%;
   }
 
   .form_s .form .error_msg {
@@ -1878,7 +1878,8 @@ body {
 
   .form_s .ctn_title {
     width: 49%;
-    height: 100%;
+
+    /* height: 100%; */
     margin-bottom: 0;
     display: flex;
     justify-content: center;
@@ -1889,13 +1890,19 @@ body {
     font-family: 'Ubuntu-Bolt', 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     width: 80%;
     height: 200px;
-    font-size: calc(1vw + 10px);
+
+    /* font-size: calc(1vw + 10px); */
+
+    /* font-size: 38px; */
     line-height: 52px;
-    margin-right: 5%;
+
+    /* margin-right: 5%; */
     display: flex;
     justify-content: center;
-    margin-top: 80px;
+
+    /* margin-top: 80px; */
     transition: 1s ease-in-out;
+    font-size: 24px;
   }
 
   .form_s h1:hover {
@@ -1910,6 +1917,10 @@ body {
     flex-direction: row;
     justify-content: flex-start;
     height: auto;
+  }
+
+  .submit .btn {
+    width: 40%;
   }
 
   .form_s .form .error_msg {
@@ -2144,6 +2155,8 @@ body {
 @media (min-width: 1300px) {
   body {
     /* background: red; */
+
+    /* border: 2px solid #110338; */
   }
 
   .main {
