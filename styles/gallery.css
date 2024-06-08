@@ -2,7 +2,7 @@
 /* Mobile Version of screen smaller than considered ( < 375px) */
 @media (max-width: 375px) {
   body {
-    display: flex;
+    /* display: flex; */
   }
 }
 
