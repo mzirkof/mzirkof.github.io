@@ -32,8 +32,8 @@ body {
 .main {
   background: #d0d9d4;
   background: #eff5f2;
-  background: hsla(#13b65c, 1, 1, 0.5);
-  width: 98%;
+
+  /* width: 98%; */
   max-width: 1880px;
 
   /* max-height: 7200px; */
@@ -46,8 +46,8 @@ body {
 /* Mobile Version of screen smaller than considered ( < 375px) */
 @media (max-width: 350px) {
   body {
-    display: flex;
-    overflow: hidden;
+    /* display: flex;
+    overflow: hidden; */
 
     #bottom_menu {
       display: none;
@@ -56,7 +56,8 @@ body {
 }
 
 /* Mobile version for phone with considered screen size minimum 375px */
-@media (min-width: 350px) {
+@media (min-width: 300px) {
+  /* @media (min-width: 350px) { */
   .toolbar .navigation,
   .img_bg2,
   .img_bg3,
@@ -73,8 +74,9 @@ body {
 
   .main {
     height: auto;
-    min-height: 6250px;
-    min-height: 6400px;
+
+    /* min-height: 6250px;
+    min-height: 6400px; */
     display: flex;
     flex-direction: column;
   }
@@ -403,7 +405,8 @@ body {
 
   /* contain */
   .r_works {
-    width: 100vw;
+    /* width: 100vw; */
+    width: 100%;
     min-height: 300px;
     display: flex;
     flex-direction: column;
@@ -420,7 +423,7 @@ body {
     line-height: 52px;
     justify-content: center;
     color: #172b4d;
-    width: 70%;
+    width: 98%;
     text-align: center;
 
     h3 {
@@ -473,7 +476,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 30px;
-    padding: 10px 15%;
+
+    /* padding: 10px 15%; */
     align-items: center;
     justify-content: center;
     width: 100%;
@@ -513,7 +517,9 @@ body {
 
   .grid_1-item .illustration_ctn {
     position: relative;
-    height: 50%;
+
+    /* height: 50%; */
+    height: 45%;
     width: 100%;
     margin: 0 auto;
 
@@ -525,8 +531,11 @@ body {
     position: relative;
     height: 100%;
     width: 100%;
+    background: #111;
     background-size: cover;
+    background-size: contain;
     background-repeat: no-repeat;
+    background-position: center;
     transition: 4s ease-in;
     overflow: hidden;
   }
@@ -538,13 +547,18 @@ body {
   .grid_1-item .txt {
     /* background: white; */
     border-top: 8px solid #36b37f;
-    gap: 5px;
-    display: grid;
-    grid-template-rows: 30% 40% 30%;
+    gap: 8px;
+
+    /* display: grid;
+    grid-template-rows: 30% 40% 30%; */
+    display: flex;
+    flex-direction: column;
     align-items: center;
     position: relative;
-    padding: 16px 0;
-    height: 49%;
+
+    /* padding: 16px 0; */
+    padding: 10px;
+    height: 55%;
     bottom: 0;
   }
 
@@ -560,7 +574,8 @@ body {
     align-items: center;
     justify-content: center;
     color: #3a4a42;
-    margin-bottom: 10px;
+
+    /* margin-bottom: 10px; */
     transition: 0.5s ease-out;
   }
 
@@ -571,10 +586,11 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2px 10px;
-    gap: 2%;
+    gap: 5%;
     width: 100%;
     height: fit-content;
-    margin-bottom: 10px;
+
+    /* margin-bottom: 10px; */
     flex: none;
     order: 1;
     flex-grow: 0;
@@ -614,6 +630,7 @@ body {
     flex: none;
     order: 2;
     flex-grow: 0;
+    padding: 10px;
   }
 
   .see {
@@ -1011,7 +1028,9 @@ body {
 
   .about_me .about {
     margin-top: 100px;
-    width: 80%;
+
+    /* width: 80%; */
+    width: 100%;
   }
 
   .grid2-container {
@@ -1020,7 +1039,8 @@ body {
   }
 
   .about .grid_2-item {
-    width: 320px;
+    max-width: 320px;
+    width: 100%;
 
     /* margin-left: 2%; */
     height: 360px;
@@ -1083,6 +1103,7 @@ body {
     border-radius: 8px;
     list-style: none;
     transition: 0.4s ease-in-out;
+    margin: 4px 0;
   }
 
   .about .txt .tag:hover {
@@ -1112,7 +1133,7 @@ body {
 
   .skills_list {
     list-style: none;
-    width: 100vw;
+    width: 80%;
     display: flex;
     justify-content: center;
   }
@@ -1142,7 +1163,7 @@ body {
     font-style: normal;
     font-weight: 700;
     font-size: 38px;
-    line-height: 60px;
+    line-height: 50px;
     text-align: center;
     color: #172b4d;
   }
@@ -1357,8 +1378,9 @@ body {
 /* Desktop scream size maximum is 450 px */
 @media (max-width: 550px) {
   .r_works {
-    width: 100%;
+    width: 80%;
     margin: 0 auto;
+    margin-top: 5px;
   }
 
   .r_works .works {
@@ -1372,13 +1394,12 @@ body {
 
 /* ========================================================================================================================= */
 
-/* ===============================    Desktop Version Portfolio ============================================================ */
+/* ===============================    Tablet Version Portfolio ============================================================ */
 
-/* Desktop scream size minimum is 768 px */
+/* Tablet scream size minimum is 768 px */
 @media (min-width: 768px) {
   .main {
     height: fit-content;
-    min-height: 2250px;
   }
 
   .toolbar {
@@ -1544,25 +1565,18 @@ body {
     .work_container {
       width: 96%;
       height: 98%;
-
-      /* margin: auto;
-      border-radius: 8px;
-      background: #ebf0ee;
-      background: rgba(21, 63, 126, 0.4);
-      overflow: hidden; */
     }
   }
 
   .grid_1-item .txt {
-    /* background: white;
-     border-radius: 5px; */
     gap: 5px;
     display: grid;
     grid-template-rows: 30% 40% 30%;
     align-items: center;
     position: relative;
     padding: 16px 0;
-    height: 49%;
+
+    /* height: 49%; */
     bottom: 0;
   }
 
@@ -1767,7 +1781,7 @@ body {
   /* Headline About me */
   .about_me {
     height: 680px;
-    width: 100vw;
+    width: 100%;
     margin-left: 0;
   }
 
@@ -1827,8 +1841,9 @@ body {
     position: relative;
     width: calc(55% + 250px);
     width: 700px;
+    width: 70%;
     height: 316px;
-    grid-gap: 8px;
+    grid-gap: 16px;
     grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
   }
@@ -1841,6 +1856,11 @@ body {
   }
 
   /* ============================================================================================================================= */
+
+  /* Skills section styling */
+  .skills_list {
+    width: 100%;
+  }
 
   /* Form section styling */
   .form_s {
@@ -1908,13 +1928,20 @@ body {
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
-    position: absolute;
+
+    /* position: absolute; */
+    position: relative;
     width: calc(6vw + 100px);
     height: calc(14vw + 250px);
     right: 14px;
     top: 2780px;
     float: bottom;
     z-index: 2;
+  }
+
+  .img_bg1 {
+    top: -240px;
+    left: 0;
   }
 
   .img_bg2 {
@@ -1925,15 +1952,17 @@ body {
     top: calc(2650px + 125px);
     top: calc(3000px + 125px);
     top: 2950px;
+    top: -240px;
     background-size: cover;
   }
 
   .img_bg3 {
-    left: 40%;
+    left: 45%;
     background-image: url(../images/illustration-2-contact-form-desktop.png);
     width: calc(4vw + 80px);
     height: calc(1vw + 90px);
     top: 3000px;
+    top: -476px;
   }
 
   footer {
@@ -2101,6 +2130,24 @@ body {
 
   .sideSocialMenu:hover {
     left: calc(100% - 60px);
+  }
+}
+
+/* ========================================================================================================================= */
+
+/* ===============================    Desktop Version Portfolio ============================================================ */
+
+/* Desktop normal scream size minimum is 1330px and the average is around 1440px
+ ( There should be another @media(min-width) for larger screams */
+
+@media (min-width: 1300px) {
+  body {
+    background: red;
+  }
+
+  .main {
+    width: 90%;
+    width: 1260px;
   }
 }
 
