@@ -823,8 +823,8 @@ body {
     display: flex;
     text-align: center;
     justify-content: center;
-    color: #172b4d;
-    text-shadow: 2px 2px 5px #110338;
+    color: #110338;
+    text-shadow: 1px 1px 5px #172b4d;
   }
 
   .pop_title .tag_ctn {
@@ -845,11 +845,12 @@ body {
     width: 311px;
     width: 100%;
     height: fit-content;
-    padding: 10px 5px;
+    padding: 10px 20px;
     font-family: 'Ubuntu', 'Inter', 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: normal;
     line-height: 30px;
     font-weight: 400;
+    font-style: italic;
+
     /* font-weight: bold; */
     text-align: justify;
     display: flex;
@@ -858,6 +859,7 @@ body {
     align-items: center;
 
     /* font-size: 16px; */
+    /* text-shadow: 1px 1px 1px #13b65c; */
     color: #344563;
     color: #111;
     position: relative;
@@ -1806,6 +1808,9 @@ body {
     height: fit-content;
     margin-bottom: 5px;
     line-height: 24px;
+    font-weight: bold;
+    color: #fcfcfc;
+    text-shadow: 1px 1px 1px #111;
   }
 
   /* ======================================== */
