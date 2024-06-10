@@ -1379,6 +1379,10 @@ body {
 
   .r_works .works {
     width: 100%;
+
+    .grid_1-item .illustration_ctn {
+      height: 30%;
+    }
   }
 
   .form_s {
