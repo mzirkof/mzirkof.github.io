@@ -688,7 +688,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgba(193, 199, 208, 0.5);
-    background: rgba(0, 10, 20, 0.5);
+    background: rgba(0, 10, 20, 0.8);
     transition: all 0.5s ease-out;
     justify-content: center;
 
@@ -1659,7 +1659,7 @@ body {
       /* box-shadow: 2px 2px 4px 10px rgba(37, 47, 137, 0.08); */
       box-shadow: 2px 2px 18px 2px #111;
       display: grid;
-      grid-template-rows: 37% 15% 8% 40%;
+      grid-template-rows: 37% 15% 10% 38%;
       background: rgba(255, 255, 255, 0.5);
 
       .illustration {
