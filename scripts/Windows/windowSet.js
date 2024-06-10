@@ -260,6 +260,14 @@ windowBtn.addEventListener('click', () => {
 });
 
 /**
+ *
+ *
+ *
+ *
+ *
+ *
+ *
+ *
  * Tic Tac Toe Game Window
  */
 const windowBtn1 = document.getElementById('p1');

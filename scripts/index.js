@@ -43,7 +43,7 @@ const works = [
    Let us work together on projects using Django and TailWindCSS. `,
     featured: '',
     image: '/projects/a.jpg',
-    technologies: ['Ruby on Rails', 'CSS', 'Javascript', 'HTML'],
+    technologies: ['React Js', 'Python-Django', 'TCPDF', 'JQuery', 'PHP', 'CSS', 'Javascript', 'HTML', 'Git', 'GitHub', 'Tailwind CSS', 'Version Control'],
     liveLink: '',
     sourceLink: '',
     linkText: 'See Project',
@@ -55,9 +55,9 @@ const works = [
     Using Html, Javascipt and CSS. Features like Modal Popup, Mobile and Desktop menu , Cards Building with Both grid & FlexBox display are used .`,
     featured: '',
     image: '/projects/portfolio.png',
-    technologies: ['HTML', 'JSON', 'CSS', 'Javascript'],
-    liveLink: '',
-    sourceLink: '',
+    technologies: ['Javascript', 'HTML', 'Git', 'GitHub', 'Tailwind CSS', 'Version Control', 'JSON', 'CSS'],
+    liveLink: 'https://mzirkof.github.io',
+    sourceLink: 'https://github.com/mzirkof/mzirkof.github.io',
     linkText: 'See Project',
   },
   {
@@ -65,37 +65,37 @@ const works = [
     description: 'Web Application dedicated to manage Secondary Schools. Organising Students and Teacher, notes and Report Cards',
     featured: 'Add Students,Add notes, Add Topics, Generate PDF cards , Manage old school years',
     image: '/projects/f.jpg',
-    technologies: ['PHP', 'J Query', 'TCPDF', 'CSS', 'Javascript', 'HTML'],
+    technologies: ['PHP', 'J Query', 'TCPDF', 'Bootstrap CSS', 'Apache Server', 'SQL', 'MySQL', 'CSS', 'Javascript', 'HTML'],
     liveLink: '',
-    sourceLink: '',
+    sourceLink: 'https://github.com/mzirkof/e-school',
     linkText: 'See Project',
   },
   {
     name: 'One Url Project ',
     description: 'Web Application dedicated to tinify or shorten URL ',
-    featured: 'Add User with different account types, Save Url and give shorten correspondance, Rediferent a shorten code to the related URL',
+    featured: 'Add User with different account types, Save Url and give shorten correspondent, Redirecting a shorten code to the related URL',
     image: '/projects/x.png',
-    technologies: ['Python', 'Axios', 'React JS', 'Redux', 'Rest Framework API', 'Django', 'TailWind CSS', 'Javascript', 'PostGreSQL', 'HTML'],
+    technologies: ['Python', 'Axios', 'React JS', 'Redux', 'Rest Framework API', 'Django', 'TailWind CSS', 'Javascript', 'PostGreSQL', 'HTML', 'CSS'],
     liveLink: '',
-    sourceLink: '',
+    sourceLink: 'https://github.com/mzirkof/1url_project',
     linkText: 'See Project',
   },
   {
     name: 'Site B Project ',
     description: 'A One page Informative Web Application ',
-    featured: 'Used Figma for designing the application, Managing CSS and Javascript Annimations, Disposing component in web Apllication with CSS flexBox, Dealing with sizes ,Shapes and shadows',
+    featured: 'Used Figma for designing the application, Managing CSS and Javascript Animations, Disposing component in web Application with CSS flexBox, Dealing with sizes ,Shapes and shadows',
     image: '/projects/SiteBCapture.png',
-    technologies: ['Figma', 'CSS', 'Javascript', 'HTML'],
+    technologies: ['Figma', 'CSS', 'Javascript', 'Git', 'GitHub', 'HTML', 'version controlling'],
     liveLink: '',
     sourceLink: '',
     linkText: 'See Project',
   },
   {
     name: 'Online TicTacToe Game ',
-    description: 'Web Application that Implement the logic and GamePlay of the legendary Morpion known as TicTacToe . Two players cans have fun online ',
+    description: 'Web Application that Implement the logic and GamePlay of the legendary Morpion known as TicTacToe . Visitors can have fun online ',
     featured: 'Control the matrix of the game map, Check if there is a winner, Let players play their turn',
     image: '/projects/TttCapture.png',
-    technologies: ['CSS', 'Javascript', 'HTML'],
+    technologies: ['Strong Algorithms', 'Javascript', 'Git', 'CSS', 'HTML', 'Version Control'],
     liveLink: '',
     sourceLink: '',
     linkText: 'See Project',
@@ -159,20 +159,28 @@ function openPopUp(work = false) {
                       <span class="title">
                       ${work.name}
                       </span>
-                      <section class="d_links" hidden >
-                        <div class="links action_2 centered">
-                          <button class="see">
-                            <span class="see_txt">See Live</span>
-                            <img src="images/Icons/live.svg">
-                          </button>
-                        </div>
-                        <div class="links action_2 centered">
+                      <section class="d_links" hidden >`;
+  if (work.liveLink.length >= 5) {
+    pop += `
+      <div class="links action_2 centered">
+        <button class="see">
+          <span class="see_txt">See Live</span>
+          <img src="images/Icons/live.svg">
+        </button>
+      </div>
+    `;
+  }
+
+  if (work.sourceLink.length >= 5) {
+    pop += `<div class="links action_2 centered">
                           <button class="see">
                             <span class="see_txt">See Source</span>
                             <img src="images/Icons/github.svg">
                           </button>
-                        </div>
-                      </section>
+                        </div>`;
+  }
+
+  pop += `</section>
                       <ul class="tag_ctn">`;
   work.technologies.map((value) => {
     pop += `<li class="tag"><span class="tag_txt">${value}</span></li>`;
@@ -199,18 +207,25 @@ function openPopUp(work = false) {
                     </div>
 
                     <div class="grid-item pop_links">
-                      <div class="links action_2 centered">
+                    `;
+  if (work.liveLink.length >= 5) {
+    pop += `<div class="links action_2 centered">
                         <button class="see">
                           <span class="see_txt">See Live</span>
                           <img src="images/Icons/live.svg">
                         </button>
-                      </div>
-                      <div class="links action_2 centered">
+                      </div>`;
+  }
+  if (work.sourceLink.length >= 5) {
+    pop += `<div class="links action_2 centered">
                         <button class="see">
                           <span class="see_txt">See Source</span>
                           <img src="images/Icons/github.svg">
                         </button>
-                      </div>
+                      </div>`;
+  }
+
+  pop += `
                     </div>
 
                 </section>`;
