@@ -2128,6 +2128,10 @@ body {
       background-image: url('./../images/Icons/ttt.png');
     }
 
+    #pSudoku {
+      background-image: url('./../scripts/Windows/ProjectsDone/Sudoku/sudoku.png');
+    }
+
     @keyframes topAndGrow {
       50% {
         animation: translate(100px);
