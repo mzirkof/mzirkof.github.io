@@ -1,85 +1,99 @@
+#mainSudokuGame {
+  background: #f1f1f1;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
 
-.sudoku {
-  width: calc(50px * 9 + 20px);
-  height: calc(50px * 9 + 20px);
-  border: 2px solid indigo;
-  background: #fcfcfc;
-
-  .ctn {
-    width: 100%;
-    height: 100%;
+  .sudoku {
+    width: calc(50px * 9 + 20px);
+    height: calc(50px * 9 + 20px);
+    border: 2px solid indigo;
     background: #fcfcfc;
 
-    /* background: transparent; */
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding: 10px 10px;
+    .ctn {
+      width: 100%;
+      height: 100%;
+      background: #fcfcfc;
 
-    .grille {
-      width: calc(50px * 3);
-      height: calc(50px * 3);
-
-      /* background: violet; */
-      border: 4px solid gray;
+      /* background: transparent; */
       display: grid;
       grid-template-columns: 1fr 1fr 1fr;
+      padding: 10px 10px;
 
-      .error {
-        .input {
-          background: rgba(245, 93, 67, 0.8);
+      .grille {
+        width: calc(50px * 3);
+        height: calc(50px * 3);
+
+        /* background: violet; */
+        border: 4px solid gray;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+
+        .error {
+          .input {
+            background: rgba(245, 93, 67, 0.8);
+          }
         }
-      }
 
-      .unknown {
-        .input {
-          background: rgba(243, 238, 237, 0.8);
+        .unknown {
+          .input {
+            background: rgba(243, 238, 237, 0.8);
+          }
+
+          .hovered_cel {
+            background: transparent;
+            background: rgba(150, 142, 223, 0.3);
+          }
         }
 
-        .hovered_cel {
-          background: transparent;
-          background: rgba(150, 142, 223, 0.3);
+        .correct {
+          .input {
+            background: rgba(46, 226, 124, 0.8);
+          }
         }
-      }
 
-      .correct {
-        .input {
-          background: rgba(46, 226, 124, 0.8);
-        }
-      }
+        .cel {
+          width: 48px;
+          height: 48px;
 
-      .cel {
-        width: 48px;
-        height: 48px;
-
-        /* background: purple; */
-        border: 1px solid rgba(200, 100, 75, 0.4);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        transition: 0.4s ease-in-out;
-
-        .input {
-          background: #fcfcfc;
-          width: 80%;
-          height: 80%;
-          font-size: 1.5rem;
-          color: gray;
-          text-align: center;
+          /* background: purple; */
+          border: 1px solid rgba(200, 100, 75, 0.4);
+          display: flex;
+          justify-content: center;
+          align-items: center;
           transition: 0.4s ease-in-out;
-        }
 
-        .input:focus {
-          /* background: greenyellow; */
-          border: none;
-          box-shadow: none;
-          font-size: 1rem;
-        }
+          .input {
+            background: #fcfcfc;
+            width: 80%;
+            height: 80%;
+            font-size: 1.5rem;
+            color: gray;
+            text-align: center;
+            transition: 0.4s ease-in-out;
+          }
 
-        .hovered_cel {
-          background: transparent;
-          background: rgba(150, 142, 223, 0.3);
+          .input:focus {
+            /* background: greenyellow; */
+            border: none;
+            box-shadow: none;
+            font-size: 1rem;
+          }
+
+          .hovered_cel {
+            background: transparent;
+            background: rgba(150, 142, 223, 0.3);
+          }
         }
       }
     }
+  }
+
+  .numbers {
+    width: 50px;
+    padding: 5px 2px;
+    height: calc(9 * 50px + 10px);
+    border: 2px solid blueviolet;
+    margin: auto 0;
   }
 }

@@ -31,7 +31,7 @@ function playSudoku() {
 
   const playGrid = baseGrid;
   const level = 1;
-  const emptyCaseNumber = 50;
+  const emptyCaseNumber = 30;
   // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
   function setCelValue(cel, value) {
@@ -826,6 +826,7 @@ function drawSudoku(gameZone) {
       </section>
     </div>
   </div>
+  <div class="numbers">gg</div>
   `;
   gameZone.innerHTML = sudokuPlayGround;
 }
