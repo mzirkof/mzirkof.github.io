@@ -31,9 +31,6 @@ function showWindow(windowContainer, name = 'Modal Window', contain = '', icon =
   windowContainer.className = 'pop_up';
 
   const bg = document.getElementsByTagName('body')[0].children[0];
-  // console.log(bg)
-
-  // let imgIndex = 0;
 
   let pop = '';
 
@@ -104,8 +101,6 @@ function setLocalWindow(name, content) {
 }
 
 const windowBtn = document.getElementById('p0');
-// windowBtn.style.backgroundImage = "url('./../images/Snapshoot Portfolio.svg')";
-// windowBtn.style.backgroundImage = "url('./../../images/Snapshoot Portfolio.svg')";
 
 const root = `${rootLocation}ProjectsDone/SiteB/`;
 const cssFiles = `<link rel="stylesheet" href="${root}css/index.css">`;
@@ -262,32 +257,41 @@ windowBtn.addEventListener('click', () => {
 /**
  *
  *
- *
- *
- *
- *
- *
- *
  * Tic Tac Toe Game Window
  */
 const windowBtn1 = document.getElementById('p1');
-// windowBtn1.style.backgroundImage="url('./../images/Snapshoot\ Portfolio.svg')"
-// windowBtn1.style.backgroundImage = "url('./../images/Icons/ttt.png')";
 
-const root2 = `${rootLocation}ProjectsDone/TicTacToe/`;
-const cssFiles2 = `<link rel="stylesheet" href="${root2}css/tttGame.css">`;
-addNodeChild(parentId, cssFiles2);
+// const root2 = `${rootLocation}ProjectsDone/TicTacToe/`;
+// const cssFiles2 = `<link rel="stylesheet" href="${root2}css/tttGame.css">`;
+// addNodeChild(parentId, cssFiles2);
 const tttGame = `
-
-<link rel="stylesheet" href="./css/tttGame.css">
     <section class="ttt_title " >Just Have Fun Online while visiting the Web Application</section>
 
     <div id="mainTttGame">
     </div>
 `;
-// const ttt = `<div class="section_container" id="mainTttGame"></div>`
 windowBtn1.addEventListener('click', () => {
   setLocalWindow('TicTacToe Game', tttGame);
+});
+
+/**
+ *
+ *
+ * SUDOKU Game Window
+ */
+const windowBtnSudoku = document.getElementById('pSudoku');
+
+// const rootSudoku = `${rootLocation}ProjectsDone/TicTacToe/`;
+// const cssFilesSudoku = `<link rel="stylesheet" href="${rootSudoku}css/tttGame.css">`;
+// addNodeChild(parentId, cssFilesSudoku);
+const sudokuGame = `
+    <section class="ttt_title " >Just Have Fun Online while visiting the Web Application</section>
+    <div id="mainSudokuGame">
+    sudoku
+    </div>
+`;
+windowBtnSudoku.addEventListener('click', () => {
+  setLocalWindow('Sudoku Game By Mzirkof', sudokuGame);
 });
 
 const windowButtons = [...document.getElementsByClassName('project_circle')];
