@@ -294,6 +294,13 @@ windowBtnSudoku.addEventListener('click', () => {
   setLocalWindow('Sudoku Game By Mzirkof', sudokuGame);
 });
 
+// document.getElementsByClassName('startSudoku').forEach((item) => {
+//   item.addEventListener('click', () => {
+//     // setLocalWindow('Sudoku Game By Mzirkof', sudokuGame);
+//     alert('play');
+//   });
+// });
+
 const windowButtons = [...document.getElementsByClassName('project_circle')];
 windowButtons.forEach((element) => {
   // console.log(element);
