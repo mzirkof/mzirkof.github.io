@@ -91,8 +91,18 @@ function playSudoku() {
 
   function changeCelBg(id, colored = true) {
     if (colored) {
-      document.getElementById(id).children[0].classList.add('hovered_cel');
-      document.getElementById(id).classList.add('hovered_cel');
+      const arr = document.getElementById(id).getAttribute('class').split(' ');
+      let flag = true;
+      for (let i = 0; i < arr.length; i += 1) {
+        if (arr[i] === 'error' || arr[i] === 'correct') {
+          flag = false;
+          break;
+        }
+      }
+      if (flag) {
+        document.getElementById(id).children[0].classList.add('hovered_cel');
+        document.getElementById(id).classList.add('hovered_cel');
+      }
     } else {
     // console.log('leaved remove className')
       document.getElementById(id).children[0].classList.remove('hovered_cel');
