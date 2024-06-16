@@ -511,7 +511,7 @@ body {
 
   .grid_1-item:hover {
     border-color: #13b65c;
-    background: #13b65c;
+    background: rgba(21, 63, 126, 0.4);
     box-shadow: 4px 4px 5px 2px rgba(48, 3, 133, 0.5);
   }
 
