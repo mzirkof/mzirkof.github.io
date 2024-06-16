@@ -100,6 +100,16 @@ const works = [
     sourceLink: '',
     linkText: 'See Project',
   },
+  {
+    name: 'Online Sudoku Game ',
+    description: 'Web Application that Implement the logic and GamePlay of the legendary Sudoku Game . Visitors can have fun online ',
+    featured: 'Control the matrix of the game map, Check if the an entered number is correct or not, Let player play and know when he has completed the sudoku',
+    image: '/projects/sudoku.png',
+    technologies: ['Strong Algorithms', 'Javascript', 'Git', 'CSS', 'HTML', 'Version Control'],
+    liveLink: '',
+    sourceLink: '',
+    linkText: 'See Project',
+  },
 ];
 let workContain = '';
 for (let index = 0; index < works.length; index += 1) {
