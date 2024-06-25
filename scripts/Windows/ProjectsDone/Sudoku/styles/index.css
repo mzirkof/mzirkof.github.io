@@ -29,6 +29,11 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
 
+        .hovered_cel {
+          background: transparent;
+          background: rgba(150, 142, 223, 0.3);
+        }
+
         .error {
           .input {
             background: rgba(245, 93, 67, 0.8);
@@ -38,11 +43,6 @@
         .unknown {
           .input {
             background: rgba(243, 238, 237, 0.8);
-          }
-
-          .hovered_cel {
-            background: transparent;
-            background: rgba(150, 142, 223, 0.3);
           }
         }
 
@@ -64,7 +64,7 @@
           transition: 0.4s ease-in-out;
 
           .input {
-            background: #fcfcfc;
+            /* background: #fcfcfc;s */
             width: 80%;
             height: 80%;
             font-size: 1.5rem;
