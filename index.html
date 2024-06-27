@@ -36,9 +36,13 @@
   <!-- Animated Loader style -->
   <link rel="stylesheet" href="./scripts/loader/loaderV2.css">
   
+  <!-- Tailwind css -->
+   <link rel="stylesheet" href="./styles/tailwindCss.css">
 </head>
 <body>
   <div class="main" id="mainPage">
+
+
 
       <!-- Toollbar ( Icon and Menu )  -->
       <header class="toolbar" id="toolbar">
@@ -87,8 +91,57 @@
 
 
 
+      <style>
+                  
+          #bg {
+            position: relative;
+            /* background: green; */
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+          }
+
+          .hero {
+            /* background: #000; */
+            width: 93%;
+            margin-left: 3.5%;
+            /* width: 1250px; */
+            height: 550px;
+            position: absolute;
+            /* background:pink; */
+            .back {
+              width: 100%;
+            }
+            .content {
+              position: relative;
+              top: 0;
+              /* background: red; */
+            }
+          }
+      </style>
+
+<div class="hero">
+  <div class="back">
+    <svg id="bg" xmlns="http://www.w3.org/2000/svg" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 800 800" opacity="0.3" role="img" aria-label="Blue Purple Red Bubbles">
+      <title>Blue Purple Red Bubbles</title>
+      <desc>A decorative SVG with blue, purple, and red bubbles.</desc>
+      <defs>
+        <filter id="blurry-filter-2" x="-100%" y="-100%" width="400%" height="400%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+          <feGaussianBlur stdDeviation="127" x="0%" y="0%" width="100%" height="100%" in="SourceGraphic" edgeMode="none" result="blur"></feGaussianBlur>
+        </filter>
+      </defs>
+      <g filter="url(#blurry-filter-2)" >
+        <ellipse rx="150" ry="150" cx="195.07575212882972" cy="489.54354010245856" fill="#ff5e92"></ellipse>
+        <ellipse rx="150" ry="150" cx="411.24331807088123" cy="210.89381150171187" fill="#df4cfe"></ellipse>
+        <ellipse rx="150" ry="150" cx="630.9035196778707" cy="172.32006381312212" fill="#008dff"></ellipse>
+        <ellipse rx="150" ry="150" cx="630.9035196778707" cy="489.32006381312212" fill="#ffd700"></ellipse>
+      </g>
+    </svg>
+  </div>
+</div>
       <!-- Headline section -->
-      <section class="headline">
+      <section class="headline content">
         <h1>
             Hey there. &nbsp; I’m Mzirkof.
           <p>
@@ -125,7 +178,11 @@
       <!-- About Me Section -->
       <section class="about_me" id="about_me">
         <section class="head">
-          <div class="decor decor1"> </div>
+
+          <div class="decor decor1">
+            <div class="content decor1_inside"></div>
+          </div>
+
           <div class="decor decor2"> </div>
           <h1>
             About me
@@ -249,8 +306,10 @@
       <section class="decor img_bg1"></section>
       <section class="decor img_bg2"></section>
       <section class="decor img_bg3"></section>
+
+
     <!-- Bottom Floating menu -->
-    <section id="bottom_menu">
+    <section id="bottom_menu" class="bg-red-300">
       <div class="section_container btMenuCtn">
 
         <!-- ========== Project Site B ========= -->
