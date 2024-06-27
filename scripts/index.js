@@ -28,7 +28,7 @@ document.querySelectorAll('.close').forEach((k) => {
 
 const works = [
   {
-    name: 'Full-Stack Programmer',
+    name: 'Full-Stack Dev Tools',
     description: `Hello, I am SOUOP Celestin. It is about 5 years that am working in web Development. It would be pleasant to share and collaborate with you on Web applications.
     I used to work with pure PHP, HTML, SQL, and Javascript in some projects: 
    HTML: Page Structure
@@ -43,7 +43,7 @@ const works = [
    Let us work together on projects using Django and TailWindCSS. `,
     featured: '',
     image: '/projects/a.jpg',
-    technologies: ['React Js', 'Python-Django', 'TCPDF', 'JQuery', 'PHP', 'CSS', 'Javascript', 'HTML', 'Git', 'GitHub', 'Tailwind CSS', 'Version Control'],
+    technologies: ['React Js', 'Django', 'REST API', 'TCPDF', 'PHP', 'Js ES6', 'Git & GitHub', 'Tailwind CSS', 'Version Control'],
     liveLink: '',
     sourceLink: '',
     linkText: 'See Project',
